@@ -1,23 +1,23 @@
 .nav-trigger
-    +resetbutton()
-    border-left: 1px solid transparent
-    width: 50px
-    height: 100%
-    color: $white
-    text-align: right
+  +resetbutton()
+  border-left: 1px solid transparent
+  width: 50px
+  height: 100%
+  color: $white
+  text-align: right
 
-    &__open,
-    &__close
-        display: inline
-        width: 20px
-        height: 20px
-        +tr(.3s ease)
+  &__open,
+  &__close
+    display: inline
+    width: 20px
+    height: 20px
+    +tr(.3s ease)
 
-    &__close
-        display: none
+  &__close
+    display: none
 
 .nav-trigger_active
-    .nav-trigger__open
-        display: none
-    .nav-trigger__close
-        display: inline
+  .nav-trigger__open
+    display: none
+  .nav-trigger__close
+    display: inline

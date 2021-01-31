@@ -1,0 +1,16 @@
+mixin cta(data)
+  section.cta
+    .cta__container.container
+      form.cta__form.form.form_cta(action="" method="post")
+        .form__group
+          input.form__input(type="text" value="" placeholder="Ваше имя")
+        .form__group
+          input.form__input(type="text" value="" placeholder="Ваш телефон")
+        .form__group
+          input.form__input(type="text" value="" placeholder="Ваш E-mail")
+
+        input.form__submit.button.button_mirrored(type="submit" value="Отправить")
+
+      .cta__content
+        h2.cta__title.title.title_reg Наши домики <span>вас <br/>очень ждут!</span>
+        .cta__text Оставьте свои данные и поможем подобрать домик

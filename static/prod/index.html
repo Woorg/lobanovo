@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/separate-css/swiper-bundle.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="assets/css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css" media="all">
+    <link href="assets/css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
     <script>
       (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
@@ -15,431 +16,696 @@
 
   <body class="page">
     <header class="header">
-      <div class="header__container container flex"><a class="header__logo logo" href="#"><span class="logo__word logo__word_first">Ski</span><span class="logo__word logo__word_second">Muse</span></a>
-        <button class="nav-trigger header__nav-trigger">
-          <svg class="nav-trigger__close" width="22px" height="22px">
-            <use xlink:href="svg-symbols.svg#close-icon"></use>
-          </svg>
-
-          <svg class="nav-trigger__open" width="20px" height="15px">
-            <use xlink:href="svg-symbols.svg#menu-icon"></use>
-          </svg>
-
-        </button>
+      <div class="header__container container flex">
+        <a class="header__logo logo" href="#">
+          <img class="logo__image" src="assets/images/general/logo.png" alt="">
+        </a>
         <nav class="nav header__nav">
-          <div class="nav__container container">
-            <ul class="nav__list flex">
-              <li class="nav__item"><a class="nav__link" href="#">Home</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="#">Resort</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="#">Contact</a>
-              </li>
-              <li class="nav__item nav__item_active"><a class="nav__link" href="#">Article</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+          <ul class="nav__list flex">
+            <li class="nav__item"><a class="nav__link" href="#">Дома</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Цены</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Скидки</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Русская баня</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Карта</a>
+            </li>
+            <li class="nav__item nav__item_active"><a class="nav__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav><a class="phone header__phone" href="tel:">+7 800 800-90-90</a><a class="header__button button button_transparent" href="#">Обратный звонок</a>
       </div>
     </header>
     <main class="page__inner">
       <section class="hero">
-        <div class="hero__slider swiper-container">
-          <div class="swiper-wrapper">
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-img-1.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-img-1.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-img-1.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-            <div class="hero__slide swiper-slide">
-              <img class="hero__image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt="">
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-            </div>
-          </div>
-        </div>
         <div class="hero__w">
           <div class="hero__container container">
-            <div class="hero__content">
-              <h1 class="hero__title">Ski Muse</h1>
-              <div class="hero__text">
-                <p>Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.</p>
-              </div><a class="hero__call-to-action open-popup button" href="#">Search ski resorts</a>
+            <h1 class="hero__title title">Коттеджный отдых в <span>двух часах</span> от москвы на территории <span>национального парка «Угра»</span></h1>
+            <div class="hero__text">Выберете желаемую <span>дату заезда и отъезда</span>, а мы подберем для вас <span>подходящий домик</span>
             </div>
-          </div>
-        </div>
-        <div class="hero__thumbs-w">
-          <div class="hero__thumbs swiper-container">
-            <div class="swiper-wrapper">
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-1.jpg" alt=""><span class="hero__thumb-title">Mayrhofen</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt=""><span class="hero__thumb-title">St. Anton am Arlberg</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt=""><span class="hero__thumb-title">Mayrhofen</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-1.jpg" alt=""><span class="hero__thumb-title">St. Anton am Arlberg</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt=""><span class="hero__thumb-title">Mayrhofen</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt=""><span class="hero__thumb-title">St. Anton am Arlberg</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt=""><span class="hero__thumb-title">Mayrhofen</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-1.jpg" alt=""><span class="hero__thumb-title">St. Anton am Arlberg</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-2.jpg" alt=""><span class="hero__thumb-title">Mayrhofen</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-              <div class="hero__thumb swiper-slide">
-                <a class="hero__thumb-w" href="">
-                  <img class="hero__thumb-image swiper-lazy" data-src="assets/images/content/hero-thumb-3.jpg" alt=""><span class="hero__thumb-title">St. Anton am Arlberg</span>
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="hero__controls flex">
-            <div class="hero__buttons flex">
-              <button class="hero__button hero__button_prev">
-                <svg class="hero__button-icon" width="12px" height="9px">
-                  <use xlink:href="svg-symbols.svg#arrow-hero"></use>
-                </svg>
-
-              </button>
-              <button class="hero__button hero__button_next">
-                <svg class="hero__button-icon" width="12px" height="9px">
-                  <use xlink:href="svg-symbols.svg#arrow-hero"></use>
-                </svg>
-
-              </button>
-            </div>
-            <div class="hero__scrollbar"></div>
-            <div class="hero__counter"></div>
-          </div>
-        </div>
-      </section>
-      <section class="country">
-        <div class="country__container container">
-          <div class="country__top flex">
-            <h2 class="country__title title">Browse by country</h2>
-            <div class="country__buttons flex">
-              <button class="country__button country__button_prev">
-                <svg class="country__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-              <button class="country__button country__button_next">
-                <svg class="country__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-            </div>
-          </div>
-          <div class="country__slider swiper-container">
-            <div class="swiper-wrapper">
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="76px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-1"></use>
-                  </svg>
-
-                  <div class="country__name">Aut</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="77px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-2"></use>
-                  </svg>
-
-                  <div class="country__name">Fra</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="77px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-3"></use>
-                  </svg>
-
-                  <div class="country__name">Che</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="77px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-4"></use>
-                  </svg>
-
-                  <div class="country__name">Ita</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="76px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-5"></use>
-                  </svg>
-
-                  <div class="country__name">Deu</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="77px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-6"></use>
-                  </svg>
-
-                  <div class="country__name">And</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="76px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-7"></use>
-                  </svg>
-
-                  <div class="country__name">Usa</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="76px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-8"></use>
-                  </svg>
-
-                  <div class="country__name">Can</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="77px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-9"></use>
-                  </svg>
-
-                  <div class="country__name">Arg</div>
-                </a>
-              </div>
-              <div class="country__slide swiper-slide">
-                <a class="country__link" href="#">
-                  <svg class="country__flag" width="76px" height="45px">
-                    <use xlink:href="svg-symbols.svg#country-10"></use>
-                  </svg>
-
-                  <div class="country__name">Nzl</div>
-                </a>
-              </div>
-            </div>
-            <div class="country__controls flex">
-              <div class="country__scrollbar"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="resort-slider">
-        <div class="resort-slider__container container">
-          <div class="resort-slider__top flex">
-            <h2 class="resort-slider__title title">Ultimate Features - Stories from the snow</h2>
-            <div class="resort-slider__buttons flex">
-              <button class="resort-slider__button resort-slider__button_prev">
-                <svg class="resort-slider__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-              <button class="resort-slider__button resort-slider__button_next">
-                <svg class="resort-slider__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-            </div>
-          </div>
-          <div class="resort-slider__slider swiper-container">
-            <div class="swiper-wrapper">
-              <div class="resort-slider__slide swiper-slide">
-                <a class="resort-slider__link" href="#">
-                  <img class="resort-slider__image swiper-lazy" data-src="assets/images/content/resort-img-1.jpg" alt=""><span class="resort-slider__name">Mayrhofen</span>
-                </a>
-              </div>
-              <div class="resort-slider__slide swiper-slide">
-                <a class="resort-slider__link" href="#">
-                  <img class="resort-slider__image swiper-lazy" data-src="assets/images/content/resort-img-2.jpg" alt=""><span class="resort-slider__name">St. Anton am Arlberg</span>
-                </a>
-              </div>
-              <div class="resort-slider__slide swiper-slide">
-                <a class="resort-slider__link" href="#">
-                  <img class="resort-slider__image swiper-lazy" data-src="assets/images/content/resort-img-3.jpg" alt=""><span class="resort-slider__name">Val d’Isere</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <button class="resort-slider__more button button_invert">Show more</button>
-        </div>
-      </section>
-      <section class="blog-slider">
-        <div class="blog-slider__container container">
-          <div class="blog-slider__top flex">
-            <h2 class="blog-slider__title title">Blog</h2>
-            <div class="blog-slider__buttons flex">
-              <button class="blog-slider__button blog-slider__button_prev">
-                <svg class="blog-slider__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-              <button class="blog-slider__button blog-slider__button_next">
-                <svg class="blog-slider__button-icon" width="20px" height="14px">
-                  <use xlink:href="svg-symbols.svg#arrow-slider"></use>
-                </svg>
-
-              </button>
-            </div>
-          </div>
-          <div class="blog-slider__slider swiper-container">
-            <div class="swiper-wrapper">
-              <div class="blog-slider__slide swiper-slide">
-                <a class="blog-slider__link" href="#">
-                  <img class="blog-slider__image swiper-lazy" data-src="assets/images/content/blog-img-1.jpg" alt="">
-                  <div class="blog-slider__name">Spending 1 week in courchevel
-                    <svg class="blog-slider__name-icon" width="16px" height="16px">
-                      <use xlink:href="svg-symbols.svg#ext-link-arrow"></use>
+            <div class="booking-form hero__form">
+              <div class="booking-form__in">
+                <form class="form" action="">
+                  <div class="form__group">
+                    <input class="form__input" type="text" value="" placeholder="Дата заезда">
+                    <svg class="form__icon" width="22px" height="21px">
+                      <use xlink:href="svg-symbols.svg#date-icon"></use>
                     </svg>
 
                   </div>
-                  <div class="blog-slider__text">Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.</div>
-                  <div class="blog-slider__date">20 nov 2020</div>
-                </a>
-              </div>
-              <div class="blog-slider__slide swiper-slide">
-                <a class="blog-slider__link" href="#">
-                  <img class="blog-slider__image swiper-lazy" data-src="assets/images/content/blog-img-1.jpg" alt="">
-                  <div class="blog-slider__name">Spending 1 week in courchevel
-                    <svg class="blog-slider__name-icon" width="16px" height="16px">
-                      <use xlink:href="svg-symbols.svg#ext-link-arrow"></use>
+                  <div class="form__group">
+                    <input class="form__input" type="text" value="" placeholder="Дата отъезда">
+                    <svg class="form__icon" width="22px" height="21px">
+                      <use xlink:href="svg-symbols.svg#date-icon"></use>
                     </svg>
 
                   </div>
-                  <div class="blog-slider__text">Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.</div>
-                  <div class="blog-slider__date">20 nov 2020</div>
-                </a>
-              </div>
-              <div class="blog-slider__slide swiper-slide">
-                <a class="blog-slider__link" href="#">
-                  <img class="blog-slider__image swiper-lazy" data-src="assets/images/content/blog-img-1.jpg" alt="">
-                  <div class="blog-slider__name">Spending 1 week in courchevel
-                    <svg class="blog-slider__name-icon" width="16px" height="16px">
-                      <use xlink:href="svg-symbols.svg#ext-link-arrow"></use>
-                    </svg>
-
+                  <div class="form__group form__group_phone">
+                    <input class="form__input" type="text" value="" placeholder="Телефон для связи">
                   </div>
-                  <div class="blog-slider__text">Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.</div>
-                  <div class="blog-slider__date">20 nov 2020</div>
-                </a>
-              </div>
-              <div class="blog-slider__slide swiper-slide">
-                <a class="blog-slider__link" href="#">
-                  <img class="blog-slider__image swiper-lazy" data-src="assets/images/content/blog-img-1.jpg" alt="">
-                  <div class="blog-slider__name">Choosing a ski school for a child
-                    <svg class="blog-slider__name-icon" width="16px" height="16px">
-                      <use xlink:href="svg-symbols.svg#ext-link-arrow"></use>
-                    </svg>
-
-                  </div>
-                  <div class="blog-slider__text">his paradigmatic country in which the sentence fried fly directly into the mouth.</div>
-                  <div class="blog-slider__date">20 nov 2020</div>
-                </a>
+                  <input class="form__submit button" type="submit" value="Отправить запрос">
+                </form>
               </div>
             </div>
-            <div class="blog-slider__controls flex">
-              <div class="blog-slider__scrollbar"></div>
+            <div class="hero__bottom">
+              <ul class="rating hero__rating">
+                <li class="rating__item">
+                  <div class="rating__num">8<span class="rating__dot">.</span>8</div>
+                  <div class="rating__text">баллов на
+                    <br/>BOOKING<span>.COM</span>
+                  </div>
+                </li>
+                <li class="rating__item">
+                  <div class="rating__num">8<span class="rating__dot">.</span>8</div>
+                  <div class="rating__text">баллов на
+                    <br/>BOOKING<span>.COM</span>
+                  </div>
+                </li>
+                <li class="rating__item">
+                  <div class="rating__num">8<span class="rating__dot">.</span>8</div>
+                  <div class="rating__text">баллов на
+                    <br/>BOOKING<span>.COM</span>
+                  </div>
+                </li>
+              </ul>
+              <svg class="hero__to-bottom" width="27" height="39" viewBox="0 0 27 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="25" height="37" rx="12.5" stroke="white" stroke-width="2" />
+                <rect x="12" y="23" width="3" height="7" rx="1.5" fill="#A3E440" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <video class="hero__video" preload autoplay muted poster="assets/images/content/video-preview.jpg"></video>
+      </section>
+      <div class="slider">
+        <div class="slider__container container">
+          <div class="slider__in swiper-container">
+            <div class="slider__wrapper swiper-wrapper">
+              <div class="slider__slide swiper-slide">
+                <img class="slider__image" src="assets/images/content/slider-img-1.png" alt="">
+                <div class="slider__content">
+                  <div class="slider__title">Новогодняя
+                    <br/>акция!</div>
+                  <div class="slider__text">с <span>31</span> декабря по <span>3</span> января
+                    <br/>за <span>35 000</span> рублей! акция!</div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <img class="slider__image" src="assets/images/content/slider-img-1.png" alt="">
+                <div class="slider__content">
+                  <div class="slider__title">Новогодняя
+                    <br/>акция! 2</div>
+                  <div class="slider__text">с <span>31</span> декабря по <span>3</span> января
+                    <br/>за <span>35 000</span> рублей! акция!</div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <img class="slider__image" src="assets/images/content/slider-img-1.png" alt="">
+                <div class="slider__content">
+                  <div class="slider__title">Новогодняя
+                    <br/>акция! 3</div>
+                  <div class="slider__text">с <span>31</span> декабря по <span>3</span> января
+                    <br/>за <span>35 000</span> рублей! акция!</div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <img class="slider__image" src="assets/images/content/slider-img-1.png" alt="">
+                <div class="slider__content">
+                  <div class="slider__title">Новогодняя
+                    <br/>акция! 4</div>
+                  <div class="slider__text">с <span>31</span> декабря по <span>3</span> января
+                    <br/>за <span>35 000</span> рублей! акция!</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider__pagination swiper-pagination"></div>
+            <button class="slider__button slider__button_next">
+              <svg class="slider__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34" />
+                <path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)" />
+                <path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00FF43" />
+                    <stop offset="1" stop-color="#1F993F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </button>
+            <button class="slider__button slider__button_prev">
+              <svg class="slider__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34" />
+                <path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)" />
+                <path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00FF43" />
+                    <stop offset="1" stop-color="#1F993F" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="choose-house">
+        <div class="choose-house__container container">
+          <h2 class="choose-house__title title title_reg">выберите <span>подходящий домик</span></h2>
+          <div class="filter choose-house__filter">
+            <form class="filter__form form" action="">
+              <div class="filter__item form__group form__group_toggle">
+                <label class="form__label">
+                  <div class="form__label-text">Нужна ли беседка?</div>
+                  <div class="form__toggle">
+                    <div class="form__toggle-text form__toggle-text_false">Нет</div>
+                    <input class="form__checkbox" type="checkbox" name="summerhouse" value="">
+                    <div class="form__toggle-slide">
+                      <div class="form__toggle-handle"><span class="form__toggle-line"></span><span class="form__toggle-line"></span><span class="form__toggle-line"></span>
+                      </div>
+                    </div>
+                    <div class="form__toggle-text form__toggle-text_true">Да</div>
+                  </div>
+                </label>
+              </div>
+              <div class="filter__item form__group form__group_quantity">
+                <div class="form__label-text">Кол-во персон</div>
+                <div class="form__quantity-w">
+                  <button class="form__quantity-sub" type="button">
+                    <svg class="form__quantity-icon" width="20px" height="2px">
+                      <use xlink:href="svg-symbols.svg#sub-icon"></use>
+                    </svg>
+
+                  </button>
+                  <input class="form__quantity-count" type="text" name="count" value="1" min="1" max="100">
+                  <button class="form__quantity-add" type="button">
+                    <svg class="form__quantity-icon" width="20px" height="20px">
+                      <use xlink:href="svg-symbols.svg#add-icon"></use>
+                    </svg>
+
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="choose-house__grid">
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-1.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-2.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-1.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-2.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-1.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-2.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+            <article class="choose-house__card card">
+              <div class="card__top">
+                <div class="card__image">
+                  <img src="assets/images/content/card-img-1.png" alt="">
+                </div>
+                <div class="card__top-w">
+                  <div class="card__title title title_small">печкин дом</div>
+                  <ul class="card__features">
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#fish-icon"></use>
+                      </svg>
+
+                    </li>
+                    <li class="card__features-item">
+                      <svg class="features-icon" width="25px" height="25px">
+                        <use xlink:href="svg-symbols.svg#wifi-icon"></use>
+                      </svg>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__body">
+                <dl class="card__specs">
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Количество персон</dt>
+                    <dd class="card__specs-desc">12</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Площадь</dt>
+                    <dd class="card__specs-desc">114 м кв.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Цена, от</dt>
+                    <dd class="card__specs-desc">2 500р./сут.</dd>
+                  </div>
+                  <div class="card__specs-item">
+                    <dt class="card__specs-term">Беседка</dt>
+                    <dd class="card__specs-desc">Да</dd>
+                  </div>
+                </dl>
+              </div><a class="card__button button button_mirrored" href="#">Подробнее</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="equipment">
+        <div class="equipment__container container">
+          <h2 class="equipment__title title title_reg">Оснащение <span>домиков</span></h2>
+          <div class="equipment__text">Домик для проживания представляет из себя деревенский
+            <br/>одноэтажный сруб 36.0 m² 3 + 1 человек.</div>
+          <div class="equipment__w">
+            <ul class="equipment__list">
+              <li class="equipment__item"><a class="equipment__link" data-src="assets/images/content/image-scheme-1.svg">Зал: двумя кроватями (двуспальная и односпальная) и возможностью поставить дополнительное спальное место (раскладушка); Телевизор и WiFi</a>
+              </li>
+              <li class="equipment__item"><a class="equipment__link" data-src="assets/images/content/image-scheme-2.svg">Кухня: холодильник, электроплита, микроволновая печь, чайник, посуда;</a>
+              </li>
+              <li class="equipment__item"><a class="equipment__link" data-src="assets/images/content/image-scheme-3.svg">Душевая: душ, туалет, умывальник, печка-камин и др. Дизайн – под русскую избу.</a>
+              </li>
+              <li class="equipment__item"><a class="equipment__link" data-src="assets/images/content/image-scheme-4.svg">Связь: В домике бесплатный WiFi. Скорость 100 мигабит в секунду. Из сотовых операторов относительно устойчив только Билайн.</a>
+              </li>
+              <li class="equipment__item"><a class="equipment__link" data-src="assets/images/content/image-scheme-5.svg">Курение: курение в Домике не допускается, но допускается на террасе</a>
+              </li>
+            </ul>
+            <div class="equipment__image lazy" data-bg="url(assets/images/content/equipment-image.jpg)">
+              <img class="equipment__scheme" src="" alt="">
+            </div>
+          </div>
+          <div class="equipment__additional">
+            <h3 class="equipment__additional title title_smallest">Дополнительные услуги</h3>
+            <ul class="equipment__additional-list">
+              <li class="equipment__additional-item equipment__additional-item_active">Русская баня на дровах — <span>750 руб./час</span>, не менее <span>2-х</span> часов</li>
+              <li class="equipment__additional-item">Выезд в Чемоданово (туда/обратно) — <span>500 руб.</span>
+              </li>
+              <li class="equipment__additional-item">Обед из русской печи (три блюда) — <span>250 руб.</span>
+              </li>
+              <li class="equipment__additional-item">Выезд в Юхнов из деревни (туда/обратно) — <span>500 руб.</span</li>
+                <li class="equipment__additional-item">Дополнительная раскладушка в домик — <span>300 руб.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container container">
+          <div class="about__image">
+            <img class="lazy" data-src="assets/images/general/about-image.png" alt="">
+          </div>
+          <h2 class="about__title title title_reg">О деревне <span>лобаново</span></h2>
+          <div class="about__text text">
+            <p>Клубная деревня Лобаново – это закрытый комплекс деревянных домиков, в котором была сохранена и поддерживается атмосфера русской деревни. Здесь мы недосягаемы для шума железных дорог и автомагистралей, воду пьем из домашнего крана, рыбу ловим
+              в своем пруду.</p>
+          </div>
+          <div class="about__articles">
+            <article class="about__article article">
+              <a class="article__link" href="#">
+                <div class="article__image">
+                  <img class="lazy" data-src="assets/images/content/article-img-1.jpg" alt="">
+                </div>
+                <div class="article__title">Наши домики</div>
+              </a>
+            </article>
+            <article class="about__article article">
+              <a class="article__link" href="#">
+                <div class="article__image">
+                  <img class="lazy" data-src="assets/images/content/article-img-2.jpg" alt="">
+                </div>
+                <div class="article__title">наша природа</div>
+              </a>
+            </article>
+            <article class="about__article article">
+              <a class="article__link" href="#">
+                <div class="article__image">
+                  <img class="lazy" data-src="assets/images/content/article-img-3.jpg" alt="">
+                </div>
+                <div class="article__title">русская баня</div>
+              </a>
+            </article>
+            <article class="about__article article">
+              <a class="article__link" href="#">
+                <div class="article__image">
+                  <img class="lazy" data-src="assets/images/content/article-img-4.jpg" alt="">
+                </div>
+                <div class="article__title">застолье</div>
+              </a>
+            </article>
+            <article class="about__article article">
+              <a class="article__link" href="#">
+                <div class="article__image">
+                  <img class="lazy" data-src="assets/images/content/article-img-5.jpg" alt="">
+                </div>
+                <div class="article__title">национальный парк</div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="cta__container container">
+          <form class="cta__form form form_cta" action="" method="post">
+            <div class="form__group">
+              <input class="form__input" type="text" value="" placeholder="Ваше имя">
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="text" value="" placeholder="Ваш телефон">
+            </div>
+            <div class="form__group">
+              <input class="form__input" type="text" value="" placeholder="Ваш E-mail">
+            </div>
+            <input class="form__submit button button_mirrored" type="submit" value="Отправить">
+          </form>
+          <div class="cta__content">
+            <h2 class="cta__title title title_reg">Наши домики <span>вас <br/>очень ждут!</span></h2>
+            <div class="cta__text">Оставьте свои данные и поможем подобрать домик</div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__container container">
+          <h2 class="gallery__title title title_reg">Галерея <span>фотографий</span></h2>
+          <div class="gallery__tabs tabs">
+            <ul class="tabs__nav flex tabs__nav" data-tabs>
+              <li class="tabs__item"><a class="tabs__link" data-tabby-default href="#gallery-1">Наши Домики</a>
+              </li>
+              <li class="tabs__item"><a class="tabs__link" href="#gallery-2">Наша природа</a>
+              </li>
+              <li class="tabs__item"><a class="tabs__link" href="#gallery-3">Русская баня</a>
+              </li>
+              <li class="tabs__item"><a class="tabs__link" href="#gallery-4">Застолье</a>
+              </li>
+            </ul>
+            <div class="tabs__content">
+              <div class="tabs__tab" id="gallery-1">
+                <div class="gallery__images">
+                  <a class="gallery__link" href="assets/images/content/gallery-img-1.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-1.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-2.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-2.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-3.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-3.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-4.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-4.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-5.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-5.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-6.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-6.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-7.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-7.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-8.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-8.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-9.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-9.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-10.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-10.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-11.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-11.jpg" alt="">
+                  </a>
+                  <a class="gallery__link" href="assets/images/content/gallery-img-12.jpg">
+                    <img class="gallery__image lazy" data-src="assets/images/content/gallery-img-12.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="tabs__tab" id="gallery-2"></div>
+              <div class="tabs__tab" id="gallery-3"></div>
+              <div class="tabs__tab" id="gallery-4"></div>
             </div>
           </div>
         </div>
       </section>
+      <div class="video"></div>
+      <div class="feedback"></div>
     </main>
     <div class="page__bottom">
       <footer class="footer">
         <div class="footer__container container flex"><a class="footer__logo logo logo_second" href="#"><span class="logo__word logo__word_first">Ski</span><span class="logo__word logo__word_second">Muse</span></a>
           <ul class="social flex footer__social">
             <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon" width="14px" height="15px">
-                  <use xlink:href="svg-symbols.svg#instagram-icon"></use>
-                </svg>
-              </a>
+              <a class="social__link" href="#"></a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
-                <svg class="social__icon" width="12px" height="13px">
-                  <use xlink:href="svg-symbols.svg#facebook-icon"></use>
-                </svg>
-              </a>
+              <a class="social__link" href="#"></a>
             </li>
           </ul>
         </div>

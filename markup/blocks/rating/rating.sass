@@ -1,57 +1,33 @@
 .rating
-    display: inline-flex
-    // flex-direction: row-reverse
-    &__star
-        +resetbutton()
-        position: relative
-        display: inline
-        margin-right: 8px
-        width: 18px
-        height: 18px
-        appearance: none
-        text-indent: -9999px
-        // cursor: pointer
-        transition: height 0.2s
-        &::after
-            position: absolute
-            width: 100%
-            height: 100%
-            // content: attr(value)
-            content: ''
-            display: flex
-            justify-content: center
-            align-items: center
-            // color: white
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            // font-size: 0.8rem
+  display: flex
 
-        &::before
-            content: ' '
-            width: 100%
-            height: 100%
-            display: flex
-            background-image: url('../images/general/star-icon.svg')
-            // background: red
-            background-size: cover
-            // border-radius: 4px
-            transition: .2s
+  &__item
+    +rfs(246px, max-width)
+    width: 100%
+    display: flex
+    align-items: center
+  &__num
+    +margin-top(-10px)
+    +margin-right(20px)
+    color: #1f993f
+    +font-size(32px)
+    font-weight: 900
+    +rfs(1.6px, letter-spacing)
+    text-align: center
+    line-height: 1
+    text-transform: uppercase
+  &__dot
+    color: #ffdb56
 
-        &.checked
-            background: url('../images/general/star-on-icon.svg') 50% no-repeat
-            background-size: cover
-
-
-
-    &:hover
-        .rating__start
-            // color: #aaa
-            opacity: 1
-
-            &:hover,
-            &:hover ~ .rating__start
-                background: url('../images/general/star-on-icon.svg') 50% no-repeat
-                background-size: cover
-                opacity: 1
-
+  &__text
+    // Text style for "баллов на"
+    color: #ffffff
+    // font-size: 16px
+    font-weight: 700
+    +font-size(16px)
+    font-style: normal
+    letter-spacing: normal
+    // line-height: 17px
+    +rfs(1.06, line-height)
+    span
+      color: #1f993f

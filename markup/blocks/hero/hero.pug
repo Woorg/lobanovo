@@ -1,117 +1,19 @@
+include ../booking-form/booking-form
+include ../rating/rating
+
 mixin hero(data)
-    section.hero&attributes(attributes)
-        .hero__slider.swiper-container
-            .swiper-wrapper
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-img-1.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                .hero__slide.swiper-slide
-                    img.hero__image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+  section.hero&attributes(attributes)
+    .hero__w
+      .hero__container.container
+        h1.hero__title.title Коттеджный отдых в <span>двух часах</span> от москвы на территории <span>национального парка «Угра»</span>
+        .hero__text Выберете желаемую <span>дату заезда и отъезда</span>, а мы подберем для вас <span>подходящий домик</span>
+        +booking-form().hero__form
+        .hero__bottom
+          +rating().hero__rating
+          | <svg class="hero__to-bottom" width="27" height="39" viewBox="0 0 27 39" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="25" height="37" rx="12.5" stroke="white" stroke-width="2"/><rect x="12" y="23" width="3" height="7" rx="1.5" fill="#A3E440"/></svg>
 
-
-        .hero__w
-            .hero__container.container
-                .hero__content
-                    h1.hero__title Ski Muse
-                    .hero__text
-                        p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
-
-                    a.hero__call-to-action.open-popup.button(href="#") Search ski resorts
-
-
-        .hero__thumbs-w
-
-            .hero__thumbs.swiper-container
-                .swiper-wrapper
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
-                            span.hero__thumb-title Mayrhofen
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                            span.hero__thumb-title St. Anton am Arlberg
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                            span.hero__thumb-title Mayrhofen
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
-                            span.hero__thumb-title St. Anton am Arlberg
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                            span.hero__thumb-title Mayrhofen
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                            span.hero__thumb-title St. Anton am Arlberg
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                            span.hero__thumb-title Mayrhofen
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-1.jpg", alt="")
-                            span.hero__thumb-title St. Anton am Arlberg
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-2.jpg", alt="")
-                            span.hero__thumb-title Mayrhofen
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-                    .hero__thumb.swiper-slide
-                        a.hero__thumb-w(href="")
-                            img.hero__thumb-image.swiper-lazy(data-src="assets/images/content/hero-thumb-3.jpg", alt="")
-                            span.hero__thumb-title St. Anton am Arlberg
-                            .swiper-lazy-preloader.swiper-lazy-preloader-white
-
-
-
-            .hero__controls.flex
-                .hero__buttons.flex
-                    button.hero__button.hero__button_prev
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-hero', className: 'hero__button-icon'})
-
-                    button.hero__button.hero__button_next
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-hero', className: 'hero__button-icon'})
-
-                .hero__scrollbar
-
-                .hero__counter
-
-
+    //- != pugHelpers.Icon.call(locals, {iconName: 'to-bottom', className: 'hero__to-bottom'})
+    video.hero__video(preload autoplay muted poster='assets/images/content/video-preview.jpg')
+      //- source(src='http://media.w3.org/2010/05/sintel/trailer.mp4' type='video/mp4')
+      //- source(src='http://media.w3.org/2010/05/sintel/trailer.webm' type='video/webm')
+      //- source(src='http://media.w3.org/2010/05/sintel/trailer.ogv' type='video/ogg')

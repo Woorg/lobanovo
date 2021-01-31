@@ -1,0 +1,52 @@
+mixin gallery(data)
+  section.gallery
+    .gallery__container.container
+      h2.gallery__title.title.title_reg Галерея <span>фотографий</span>
+
+      .gallery__tabs.tabs
+        ul.tabs__nav.flex.tabs__nav(data-tabs)
+          li.tabs__item
+            a.tabs__link(data-tabby-default href="#gallery-1") Наши Домики
+          li.tabs__item
+            a.tabs__link( href="#gallery-2") Наша природа
+          li.tabs__item
+            a.tabs__link( href="#gallery-3") Русская баня
+          li.tabs__item
+            a.tabs__link( href="#gallery-4") Застолье
+
+
+
+        .tabs__content
+          #gallery-1.tabs__tab
+            .gallery__images
+              a.gallery__link(href="assets/images/content/gallery-img-1.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-1.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-2.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-2.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-3.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-3.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-4.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-4.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-5.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-5.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-6.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-6.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-7.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-7.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-8.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-8.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-9.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-9.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-10.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-10.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-11.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-11.jpg" alt="")
+              a.gallery__link(href="assets/images/content/gallery-img-12.jpg")
+                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-12.jpg" alt="")
+
+
+          #gallery-2.tabs__tab
+
+          #gallery-3.tabs__tab
+
+          #gallery-4.tabs__tab

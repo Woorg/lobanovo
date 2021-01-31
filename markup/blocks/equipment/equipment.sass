@@ -1,0 +1,114 @@
+.equipment
+  &__container
+    +padding-top(75px)
+    +padding-bottom(75px)
+  &__title
+    +margin-bottom(35px)
+  &__text
+    +margin-bottom(58px)
+
+  &__w
+    position: relative
+    +padding-top(90px)
+    +padding-bottom(90px)
+    +padding-left(73px)
+    // max-width: 1365px
+    +rfs(1365px, max-width)
+    width: 100%
+    // min-height: 582px
+    +rfs(582px, min-height)
+    display: flex
+    flex-wrap: wrap
+    background: url('../images/general/equipment-bg.svg') 0 0 no-repeat
+    background-size: cover
+
+  &__list
+    +rfs(660px, max-width)
+    width: 100%
+
+  &__item
+    +margin-bottom(36px)
+    &:last-child
+      margin-bottom: 0
+
+  &__item_active
+    .equipment__link
+      color: #9aff00
+      +tr(.3s linear)
+      &:after
+        visibility: visible
+        opacity: 1
+        +tr(opacity .3s linear)
+  &__link
+    position: relative
+    display: block
+    color: #ffffff
+    +font-size(18px)
+    font-weight: 700
+    // line-height: 25px
+    +rfs(1.39, line-height)
+    +tr(.3s linear)
+    &:hover
+      color: #9aff00
+      +tr(.3s linear)
+      &:after
+        visibility: visible
+        opacity: 1
+        +tr(opacity .3s linear)
+
+    &:after
+      position: absolute
+      top: 50%
+      left: -12px
+      width: 8px
+      height: 41px
+      content: ''
+      visibility: hidden
+      background-color: #a3e440
+      opacity: 0
+      transform: translateY(-50%)
+      +tr(opacity .3s linear)
+
+  &__image
+    position: absolute
+    top: -50px
+    right: 90px
+    width: 450px
+    height: 479px
+    background-color: #ffffff
+    background-size: cover
+
+  &__scheme
+    position: absolute
+    top: 5px
+    left: 6px
+    // opacity: 0
+    +tr(.3s linear)
+
+  &__additional
+    +margin-top(110px)
+
+  &__additional-title
+    +margin-bottom(20px)
+  &__additional-list
+    display: flex
+    flex-wrap: wrap
+  &__additional-item
+    border-bottom: 1px solid #ececec
+    +margin-right(120px)
+    +padding-top(26px)
+    +padding-bottom(26px)
+    // max-width: 540px
+    +rfs(540px, max-width)
+    width: 100%
+    color: #333333
+    +font-size(18px)
+    font-weight: 600
+    // line-height: 1.444
+    +rfs(1.444, line-height)
+    &:last-child
+      margin-right: 0
+    span
+      color: #229c3f
+      font-family: $n
+      font-weight: 600

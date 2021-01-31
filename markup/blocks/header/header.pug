@@ -1,31 +1,19 @@
 include ../nav-trigger/nav-trigger.pug
 include ../nav/nav.pug
+include ../phone/phone.pug
 
 mixin header(data)
-    header.header&attributes(attributes)
-        .header__container.container.flex
+  header.header&attributes(attributes)
 
-            a.header__logo.logo(href="#")
+    .header__container.container.flex
 
-                span.logo__word.logo__word_first Ski
-                span.logo__word.logo__word_second Muse
+      a.header__logo.logo(href="#")
+        img.logo__image(src="assets/images/general/logo.png", alt="")
 
-            +nav-trigger().header__nav-trigger
+      //- +nav-trigger().header__nav-trigger
 
-            +nav().header__nav
+      +nav().header__nav
 
+      +phone().header__phone
 
-mixin header-resort(data)
-    header.header&attributes(attributes)
-        .header__container.container.flex
-
-            a.header__logo.logo(href="#")
-
-                span.logo__word.logo__word_first Ski
-                span.logo__word.logo__word_second Muse
-
-            .header__title Weekend in the best resort of the Carpathians
-
-            +nav-trigger().header__nav-trigger
-
-            +nav().header__nav
+      a.header__button.button.button_transparent(href="#") Обратный звонок

@@ -1,1 +1,92 @@
+.slider
+  +margin-top(-200px)
 
+  &__container
+    position: relative
+
+  &__wrapper
+    border-radius: 20px
+
+  &__slide
+    position: relative
+    background-image: linear-gradient(to top, rgba(14, 13, 22, 0) 0%, #0e0d16 53%, rgba(14, 13, 22, 0) 100%)
+    border-radius: 20px
+    box-shadow: 0 45px 90px rgba(53, 60, 54, 0.5)
+
+  &__image
+    width: 100%
+    height: auto
+    display: block
+    object-fit: cover
+    border-radius: 20px
+
+  &__content
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    +padding-top(106px)
+    +padding-left(143px)
+
+  &__title
+    +margin-bottom(10px)
+    color: #ffffff
+    font-family: $b
+    +font-size(72px)
+    font-weight: 700
+    font-style: normal
+    +rfs(1.44px, letter-spacing)
+    +rfs(66.5px, line-height)
+    text-align: left
+
+  &__text
+    color: #269f3f
+    +font-size(24px)
+    font-weight: 400
+    // line-height: 25px
+    +rfs(1.041, line-height)
+    span
+      color: #0adb41
+      font-weight: 700
+
+  &__pagination,
+  .swiper-pagination-bullets
+    // bottom: -20px
+    // +bottom(-20px)
+    +rfs(50px, bottom)
+
+  .swiper-pagination-bullet
+    border: 2px solid #e1e1e1
+    margin-right: 5px
+    margin-left: 5px
+    width: 18px
+    height: 18px
+    background: transparent
+    opacity: 1
+
+  .swiper-pagination-bullet-active
+    position: relative
+    border: 2px solid #09e041
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ''
+      transform: translate(-50%, -50%)
+      width: 8px
+      height: 8px
+      background-color: #ffffff
+      border-radius: 50%
+
+  &__button
+    +resetbutton()
+    position: absolute
+    z-index: 1
+    top: 50%
+
+  &__button_next
+    right: 0
+    transform: translateY(-50%) rotate(180deg)
+  &__button_prev
+    left: 0
+    transform: translateY(-50%)

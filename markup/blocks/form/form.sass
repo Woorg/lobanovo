@@ -1,18 +1,53 @@
 .form
+  display: flex
 
-  &__row
-    flex-wrap: wrap
-    +mq($small)
-      flex-wrap: nowrap
+  // &__row
+  //   flex-wrap: wrap
+  //   +mq($small)
+  //     flex-wrap: nowrap
 
-  &__field
-    margin-bottom: 22px
+  &__group
+    position: relative
+    border: 1px solid #d7dbd7
+    margin-bottom: 0
+    margin-right: 24px
+    // max-width: 250px
+    +rfs(250px, max-width)
     width: 100%
+    height: 68px
     display: flex
+    background-color: #ffffff
+    border-radius: 60px
+    &:last-child
+      margin-right: 0
 
     .wpcf7-form-control-wrap
-      //width: 100%
       flex-grow: 1
+
+  &__group_phone
+    +rfs(360px, max-width)
+
+  &__group_toggle,
+  &__group_quantity
+    border: none
+    margin-bottom: 0
+    margin-right: 73px
+    // max-width: 250px
+    +rfs(132px, max-width)
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+
+    background-color: transparent
+    border-radius: 0
+    &:last-child
+      margin-right: 0
+
+  &__quantity-w
+    display: flex
+
+
 
   &__field_input
     +mq($small)
@@ -20,66 +55,188 @@
     &:last-child
       margin-right: 0
 
-  //&__field_message
-  //  .form__label-text
-  //  height: 24px
+  &__icon
+    position: absolute
+    top: 50%
+    right: 37px
+    transform: translateY(-50%)
+
 
   &__label
     position: relative
     display: block
     width: 100%
-
-    &:focus,
-    &:focus-within
-      .form__label-text
-        transform: translateY(-100%)
-        +tr(.1s linear)
-
+    cursor: pointer
 
   &__label-text
+    margin-bottom: 18px
+    color: #333333
+    font-size: 14px
+    font-weight: 700
+    line-height: 1
+    text-align: left
+    +tr(.1s linear)
+
+  &__toggle
+    display: flex
+    position: relative
+    height: 42px
+    .form__checkbox
+      visibility: hidden
+      appearance: none
+
+      &:checked + .form__toggle-slide
+        .form__toggle-handle
+          // transform: translateY(-50%)
+          transform: translate(calc(100% - 6px), -50%)
+          +tr(.3s ease-out)
+
+  &__toggle-slide
     position: absolute
     top: 0
     left: 0
+    right: 0
+    bottom: 0
+    display: flex
     width: 100%
-    height: 100%
-    color: rgba(31, 31, 31, .5)
-    font-size: 14px
-    font-weight: 400
-    letter-spacing: -0.28px
-    line-height: 24px
-    +tr(.1s linear)
+    background-color: #a3e440
+    box-shadow: 0 20px 71px rgba(53, 60, 54, 0.1)
+    border-radius: 5px
+
+  &__toggle-handle
+    position: absolute
+    z-index: 2
+    top: 50%
+    left: 2px
+    width: 67px
+    height: 38px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #ffffff
+    border-radius: 4px
+    box-shadow: 0 20px 71px rgba(53, 60, 54, 0.1)
+    transform: translateY(-50%)
+    +tr(.3s ease-out)
+
+  &__toggle-line
+    margin-right: 9px
+    width: 2px
+    height: 26px
+    background: #f4f4f4
+    &:last-child
+      margin-right: 0
+
+  &__toggle-text
+    position: absolute
+    z-index: 1
+    top: 50%
+    width: 50%
+    color: #333b26
+    // font-size: 14px
+    +font-size(14px)
+    font-weight: 700
+    // letter-spacing: 0.7px
+    +rfs(0.7px, letter-spacing)
+    line-height: 1
+    text-transform: uppercase
+    text-align: center
+    transform: translateY(-50%)
+
+  &__toggle-text_false
+    left: 0
+
+  &__toggle-text_true
+    right: 0
 
   &__input,
   &__message
     +resetbutton()
+    padding-right: 37px
+    padding-left: 27px
     width: 100%
-    height: 24px
-    color: rgba(31, 31, 31, .5)
-    font-size: 14px
-    font-weight: 400
-    letter-spacing: -0.28px
-    line-height: 24px
-    border-bottom: 2px solid #6a7bff
+    height: 68px
+    background-color: transparent
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 600
     +placeholder()
-      color: rgba(31, 31, 31, .5)
-      font-size: 14px
-      font-weight: 400
-      letter-spacing: -0.28px
-      line-height: 24px
-
+      color: #4d4d4d
+      font-size: 18px
+      font-weight: 600
 
   &__message
     padding-top: 14px
     padding-bottom: 17px
     min-height: 100px
-  // line-height: 1.56
 
   &__submit
-    margin-top: 10px
-    padding-right: 80px
-    padding-left: 80px
+    +padding-right(80px)
+    +padding-left(80px)
     flex-grow: 1
     text-align: center
+
+  &__quantity-sub,
+  &__quantity-add
+    +resetbutton()
+    width: 42px
+    height: 42px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #333
+    +tr(.3s linear)
+    &:hover
+      color: #d7d7d7
+      +tr(.3s linear)
+
+  // &__quantity-add
+
+  // &__quantity-icon
+
+  &__quantity-count
+    +resetbutton()
+    width: 76px
+    height: 42px
+    background-color: #ffffff
+    color: #333333
+    font-size: 18px
+    font-weight: 700
+    text-align: center
+    border-radius: 5px
+    box-shadow: 0 20px 71px rgba(53, 60, 54, 0.1)
+
+
+.form_cta
+  +padding-right(76px)
+  +padding-left(76px)
+  display: flex
+  flex-direction: column
+
+  .form__group
+    +margin-bottom(26px)
+    border: none
+    max-width: 100%
+    height: 56px
+    background-color: #f8f8f8
+    border-radius: 60px
+
+  .form__input
+    color: #828282
+    font-family: $n
+    font-size: 16px
+    font-weight: 400
+    text-align: center
+    +placeholder()
+      color: #828282
+      font-family: $n
+      font-size: 16px
+      font-weight: 400
+
+  .form__submit
+    height: 64px
+    font-weight: 700
+
 
 .wpcf7
   form.invalid,

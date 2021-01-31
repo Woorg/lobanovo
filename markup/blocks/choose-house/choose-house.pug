@@ -1,0 +1,200 @@
+include ../filter/filter
+
+
+mixin choose-house(data)
+  section.choose-house
+    .choose-house__container.container
+      h2.choose-house__title.title.title_reg выберите <span>подходящий домик</span>
+      +filter().choose-house__filter
+
+      .choose-house__grid
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-1.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-2.png" alt="")
+
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-1.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-2.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-1.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-2.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+          a.card__button.button.button_mirrored(href="#") Подробнее
+
+        article.choose-house__card.card
+          .card__top
+            .card__image
+              img(src="assets/images/content/card-img-1.png" alt="")
+            .card__top-w
+              .card__title.title.title_small печкин дом
+              ul.card__features
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'fish-icon', className: 'features-icon'})
+                li.card__features-item
+                  != pugHelpers.Icon.call(locals, {iconName: 'wifi-icon', className: 'features-icon'})
+          .card__body
+            dl.card__specs
+              .card__specs-item
+                dt.card__specs-term Количество персон
+                dd.card__specs-desc 12
+              .card__specs-item
+                dt.card__specs-term Площадь
+                dd.card__specs-desc 114 м кв.
+              .card__specs-item
+                dt.card__specs-term Цена, от
+                dd.card__specs-desc 2 500р./сут.
+              .card__specs-item
+                dt.card__specs-term Беседка
+                dd.card__specs-desc Да
+
+          a.card__button.button.button_mirrored(href="#") Подробнее

@@ -51,7 +51,7 @@ module.exports = {
     "useArchiver": true,
     "ulimit": 4096,
     "templater": "pug",
-    "cssPreprocessor": "scss",
+    "cssPreprocessor": "sass",
     "useImagesForDisplayWithDpi": [
         96,
         192,

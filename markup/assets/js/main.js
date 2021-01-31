@@ -1,5 +1,6 @@
 import svg4everybody from 'svg4everybody';
 import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay} from 'swiper';
+import Tabby from 'tabbyjs';
 
 (function ($) {
 
@@ -17,7 +18,7 @@ import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar,
     'font-weight: 400'
   ].join(';');
 
-  console.log('%c developed by igor gorlov gorlov https://igrlv.ru', styles);
+  console.log('%c developed by igor gorlov gorlov https://gorlov.gq', styles);
 
 
   /*
@@ -94,250 +95,37 @@ import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar,
       }
     });
 
-    // HeroSlider
 
+     // configure Swiper to use modules
     Swiper.use([Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay]);
 
-    const $heroThumbs = $('.hero__thumbs');
-
-    const $heroSwiper = new Swiper('.hero__slider', {
+    const $sliderSwiper = new Swiper('.slider__in', {
       direction: 'horizontal',
+      loop: true,
       effect: 'fade',
       fadeEffect: {
         crossFade: true
       },
-      preloadImages: false,
-      lazy: true,
-      loop: false,
-      loopedSlides: 1,
-
-    });
-
-
-    if ($heroThumbs.length > 0) {
-
-      const $heroSwiperThumbs = new Swiper('.hero__thumbs', {
-        setWrapperSize: true,
-        initialSlide: 0,
-        width: '252',
-        slideToClickedSlide: true,
-        updateOnWindowResize: true,
-        roundLengths: true,
-
-        preloadImages: false,
-        lazy: true,
-        lazy: {
-          loadPrevNext: true,
-          loadPrevNextAmount: 4,
-        },
-        centeredSlides: true,
-        touchRatio: 0.2,
-        slideToClickedSlide: false,
-        loop: false,
-        touchRatio: 0.2,
-
-        navigation: {
-          nextEl: '.hero__button_next',
-          prevEl: '.hero__button_prev',
-        },
-
-        scrollbar: {
-          el: '.hero__scrollbar',
-          draggable: true,
-        },
-
-        pagination: {
-          el: '.hero__counter',
-          type: 'custom',
-          renderCustom: function (swiper, current, total) {
-            return (current > 9) ? current + '/' + total : '0' + current + '/' + total;
-          }
-        },
-
-        breakpoints: {
-          0: {
-          },
-          1100: {
-          }
-        }
-
-      });
-
-      $heroSwiper.controller.control = $heroSwiperThumbs;
-      $heroSwiperThumbs.controller.control = $heroSwiper;
-
-    }
-
-
-    // Feedback slider
-
-    const $countrySwiper = new Swiper('.country__slider', {
-      loop: true,
-      scrollbar: {
-        el: '.country__scrollbar',
-        draggable: true,
-      },
-      navigation: {
-        nextEl: '.country__button_next',
-        prevEl: '.country__button_prev',
-      },
-      breakpoints: {
-        200: {
-          slidesPerView: 3,
-        },
-        640: {
-          slidesPerView: 6,
-        },
-        800: {
-          slidesPerView: 10,
-        }
-
-      }
-
-    });
-
-
-    const $resortSwiper = new Swiper('.resort-slider__slider', {
-      direction: 'horizontal',
-      loop: true,
-      slidesPerView: 3,
-      navigation: {
-        nextEl: '.resort-slider__button_next',
-        prevEl: '.resort-slider__button_prev',
-      },
-
-      lazy: true,
-      lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 3,
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1
-        },
-        640: {
-          slidesPerView: 3
-        }
-      }
-
-    });
-
-    $(window).on('resize', function (e) {
-
-      if ($(window).outerWidth() <= 640) {
-        $('.swiper-wrapper').addClass("disabled");
-        $('.swiper-pagination').addClass("disabled");
-
-      }
-
-    });
-
-    if ($(window).outerWidth() <= 640) {
-      $('.swiper-wrapper').addClass("disabled");
-      $('.swiper-pagination').addClass("disabled");
-
-    }
-
-    const $blogSwiper = new Swiper('.blog-slider__slider', {
-      direction: 'horizontal',
-      loop: true,
       slidesPerView: 1,
-      scrollbar: {
-        el: '.blog-slider__scrollbar',
-        draggable: true,
-      },
-      navigation: {
-        nextEl: '.blog-slider__button_next',
-        prevEl: '.blog-slider__button_prev',
-      },
-
-      lazy: true,
-      lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 4,
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1.3
-        },
-        320: {
-          slidesPerView: 1.3
-        },
-        375: {
-          slidesPerView: 1.4
-        },
-        640: {
-          slidesPerView: 4
-        }
-      }
-
-
-    });
-
-
-    const $relatedSwiper = new Swiper('.related-slider .blog-slider__slider', {
-      direction: 'horizontal',
-      slidesPerView: 2,
-      scrollbar: {
-        el: '.related-slider .blog-slider__scrollbar',
-        draggable: true,
-      },
-      navigation: {
-        nextEl: '.related-slider .blog-slider__button_next',
-        prevEl: '.related-slider .blog-slider__button_prev',
-      },
-
-      lazy: true,
-      lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 1
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1.3
-        },
-        320: {
-          slidesPerView: 1.3
-        },
-        375: {
-          slidesPerView: 1.4
-        },
-        640: {
-          slidesPerView: 2
-        }
-
-
-      }
-
-
-    });
-
-
-    const $sideSwiper = new Swiper('.sidebar__slider', {
-      direction: 'horizontal',
-      preloadImages: false,
-      lazy: true,
-      loop: false,
-      loopedSlides: 1,
       pagination: {
-        el: '.sidebar__dots',
+        el: '.slider__pagination',
         type: 'bullets',
         clickable: true
+      },
+      navigation: {
+        nextEl: '.slider__button_next',
+        prevEl: '.slider__button_prev',
+      },
+
+      lazy: true,
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 1,
       },
 
     });
 
     // Gallery
-
-    $('.resort__sidebar .sidebar__image').magnificPopup({
-      type: 'image',
-      gallery: {
-        enabled: true
-      }
-    });
 
     $('.content__side_mob .sidebar__image').magnificPopup({
       type: 'image',
@@ -346,24 +134,67 @@ import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar,
       }
     });
 
+
+    /**
+     * Quantity
+     */
+
+    $('.form__quantity-add').click(function () {
+      const th = $(this).closest('.form__quantity-w').find('.form__quantity-count');
+      th.val(+th.val() + 1);
+    });
+    $('.form__quantity-sub').click(function () {
+      const th = $(this).closest('.form__quantity-w').find('.form__quantity-count');
+          if (th.val() > 1) th.val(+th.val() - 1);
+    });
+
+    /**
+     * Scheme
+     */
+
+    $(".equipment__link").hover( function() {
+      $(this).parent().toggleClass('.equipment__item_active');
+      const value=$(this).attr('data-src');
+      $(".equipment__scheme").attr("src", value);
+    });
+
+    /**
+     * Tabs
+     */
+
+    if ( $('.tabs').length > 0 ) {
+      const tabs = new Tabby('.tabs__nav');
+    }
+
+    /**
+     * Magnific
+     */
+
+    $('.gallery__link').magnificPopup({
+      type: 'image',
+      gallery:{
+        enabled:true
+      }
+    })
+
     // List pages
 
-    // function pageWidget(pages) {
-    //   var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
-    //   widgetWrap.prependTo("body");
-    //   for (var i = 0; i < pages.length; i++) {
-    //     $('<li class="widget_item"><a class="widget_link" href="' + pages[i] + '.html' + '">' + pages[i] + '</a></li>').appendTo('.widget_list');
-    //   }
-    //   var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:absolute;top:0;left:0;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
-    //   widgetStilization.prependTo(".widget_wrap");
-    // }
-    //
-    // pageWidget([
-    //   'index',
-    //   'resort',
-    //   'article',
-    //   'contact-us',
-    // ]);
+    function pageWidget(pages) {
+      var widgetWrap = $('<div class="widget_wrap"><ul class="widget_list"></ul></div>');
+      widgetWrap.prependTo("body");
+      for (var i = 0; i < pages.length; i++) {
+        $('<li class="widget_item"><a class="widget_link" href="' + pages[i] + '.html' + '">' + pages[i] + '</a></li>').appendTo('.widget_list');
+      }
+      var widgetStilization = $('<style>body {position:relative} .widget_wrap{position:absolute;top:0;left:0;z-index:9999;padding:10px 20px;background:#222;border-bottom-right-radius:10px;-webkit-transition:all .3s ease;transition:all .3s ease;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.widget_wrap:after{content:" ";position:absolute;top:0;left:100%;width:24px;height:24px;background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%;cursor:pointer}.widget_wrap:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}.widget_item{padding:0 0 10px}.widget_link{color:#fff;text-decoration:none;font-size:15px;}.widget_link:hover{text-decoration:underline} </style>');
+      widgetStilization.prependTo(".widget_wrap");
+    }
+
+    pageWidget([
+      'index',
+      'resort',
+      // 'article',
+      // 'contact-us',
+    ]);
 
 
   });

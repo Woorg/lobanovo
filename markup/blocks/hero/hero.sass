@@ -1,246 +1,62 @@
 .hero
-    position: relative
-    height: 824px
-    overflow: hidden
-    +mq($large)
-        height: 800px
-    &__w
-        position: relative
-        z-index: 1
-        padding-top: 170px
-        padding-bottom: 37px
-        width: 100%
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        flex-wrap: wrap
-        +mq($large)
-            padding-top: 0
-            padding-bottom: 0
-            height: 100%
-            justify-content: center
+  position: relative
+  // +padding-top(75%)
+  // +padding-top(60%)
+  height: 1273px
+  overflow: hidden
+  &__w
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    // background-image: linear-gradient(to bottom, rgba(9, 38, 28, 0.45), rgba(9, 38, 28, 0.45)), linear-gradient(to top, #222746, rgba(32, 34, 45, 0.12)), linear-gradient(to top, #222746, rgba(32, 34, 45, 0.12)), linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0))
 
+  &__container
+    +padding-top(295px)
 
-    &__content
-        max-width: 100%
-        width: 100%
-        color: $white
-        +mq($large)
-            max-width: 380px
+  &__title
+    +margin-bottom(44px)
+    +padding-right(370px)
 
-    &__title
-        margin-bottom: 10px
-        font-size: 60px
-        font-weight: 700
-        letter-spacing: -1.2px
-        line-height: 1
-        +mq($large)
-            margin-bottom: 15px
-            font-size: 90px
-            letter-spacing: -1.8px
+  &__text
+    color: #ffffff
+    +font-size(24px)
+    font-family: $n
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    // line-height: 25px
+    +font-size(24px)
+    font-weight: 400
+    +rfs(1.04, line-height)
+    // +mq($large)
+    span
+      font-weight: 700
 
-    &__text
-        color: #f4f5f7
-        font-size: 16px
-        font-weight: 400
-        letter-spacing: -0.32px
-        line-height: 1.375
-        +mq($large)
-            font-size: 16px
+  &__form
+    +margin-top(47px)
 
-    &__call-to-action
-        margin-top: 16px
-        display: flex
-        justify-content: center
-        +mq($large)
-            display: inline-block
+  &__bottom
+    +margin-top(202px)
+    display: flex
 
-    &__slider
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        width: 100%
-        height: 100%
-        +mq($large)
-            height: 100%
+  &__rating
+    +rfs(732px, max-width)
+    width: 100%
+  &__to-bottom
+    margin-left: auto
 
-    &__slide
-        position: relative
-        overflow: hidden
-        background: rgba(0, 0, 0, 0.2)
-        &:after
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            content: ''
-            background-color: rgba(0, 0, 0, 0.1)
-            backdrop-filter: blur(15px)
-
-    &__image
-        position: absolute
-        z-index: 0
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-
-        // object-position: 50%
-        // filter: blur(15px)
-        // transform: scale(1.07)
-
-
-    &__thumbs-w
-        position: static
-        z-index: 2
-        top: 0
-        right: 0
-        bottom: 0
-        left: 20px
-        // left: 0
-        padding-right: 0
-        padding-left: 20px
-        max-width: 100%
-        width: 100%
-        height: auto
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        flex-wrap: wrap
-        +mq($large)
-            position: absolute
-            left: auto
-            padding-right: 0
-            padding-left: 0
-            max-width: 722px
-            height: 100%
-            justify-content: center
-
-
-    &__thumbs
-        position: relative
-        margin-right: -0px
-        margin-left: -10px
-
-        .swiper-wrapper
-            box-sizing: border-box
-    &__thumb
-        padding-top: 10px
-        padding-right: 8px
-        padding-left: 8px
-        padding-bottom: 16px
-        // width: 200px
-        max-width: 33.3%
-        width: 100%
-        height: 326px
-
-        +mq($large)
-            padding-right: 10px
-            padding-left: 10px
-            height: 326px
-
-    &__thumb-w
-        position: relative
-        height: 100%
-        display: flex
-        flex-direction: column
-        background: rgba(0, 0, 0, 0.2)
-        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2)
-        &:after
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            content: ''
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,.5) 100%)
-
-    &__thumb-image
-        position: relative
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-        object-position: 50%
-
-    &__thumb-title
-        position: absolute
-        z-index: 1
-        bottom: 0
-        padding-right: 18px
-        padding-bottom: 20px
-        padding-left: 18px
-        color: #ffffff
-        font-size: 22px
-        font-weight: 500
-        letter-spacing: -0.44px
-        line-height: normal
-
-    &__controls
-        position: relative
-        z-index: 1
-        margin-top: 12px
-        max-width: 100%
-        width: 100%
-        align-items: center
-        +mq($large)
-            max-width: 664px
-            position: static
-
-    &__buttons
-        margin-right: 16px
-        flex-wrap: nowrap
-        +mq($large)
-            margin-right: 30px
-
-    &__button
-        +resetbutton()
-        border: 1px solid rgba(255, 255, 255, 0.5)
-        margin-right: 8px
-        width: 32px
-        height: 32px
-        color: #FFF
-        &:last-child
-            margin-right: 0
-
-    &__button_next
-        transform: rotate(180deg)
-
-    // &__button_prev
-
-    // &__button-icon
-
-    &__scrollbar
-        // max-width: 486px
-        max-width: 75.2%
-        width: 100%
-        height: 2px
-        flex-grow: 1
-        flex-shrink: 0
-        background-color: rgba(255,255,255, .2)
-        +mq($large)
-            max-width: 73.2%
-
-        .swiper-scrollbar-drag
-            background-color: #6a7bff
-
-    &__counter
-        margin-left: 30px
-        display: none
-        color: #ffffff
-        font-size: 18px
-        font-weight: 700
-        letter-spacing: -0.36px
-        line-height: 1
-        white-space: nowrap
-        +mq($large)
-            display: block
-
-
-
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: 50% 0

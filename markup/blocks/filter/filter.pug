@@ -1,0 +1,25 @@
+mixin filter(data)
+  .filter&attributes(attributes)
+    form.filter__form.form(action="")
+      .filter__item.form__group.form__group_toggle
+        label.form__label
+          .form__label-text Нужна ли беседка?
+          .form__toggle
+            .form__toggle-text.form__toggle-text_false Нет
+            input.form__checkbox(type="checkbox" name="summerhouse" value="" )
+            .form__toggle-slide
+              .form__toggle-handle
+                span.form__toggle-line
+                span.form__toggle-line
+                span.form__toggle-line
+
+            .form__toggle-text.form__toggle-text_true Да
+
+      .filter__item.form__group.form__group_quantity
+        .form__label-text Кол-во персон
+        .form__quantity-w
+          button.form__quantity-sub(type="button")
+            != pugHelpers.Icon.call(locals, {iconName: 'sub-icon', className: 'form__quantity-icon'})
+          input.form__quantity-count(type="text" name="count" value="1" min="1" max="100")
+          button.form__quantity-add(type="button")
+            != pugHelpers.Icon.call(locals, {iconName: 'add-icon', className: 'form__quantity-icon'})

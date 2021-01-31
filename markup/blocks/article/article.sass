@@ -1,242 +1,74 @@
 .article
-  // &__top
+  position: relative
+  // width: 457px
+  // height: 406px
+  +rfs(406px, height)
+  background-color: #ffffff
+  // border-radius: 20px
+  +rfs(20px, border-radius)
+  box-shadow: 0 45px 90px rgba(53, 60, 54, 0.5)
+  +tr(.3s linear)
+
+  &:hover
+    box-shadow: none
+    +tr(.3s linear)
 
   &__image
-    height: 220px
+    position: absolute
+    // z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: 50%
+    // border-radius: 20px
+    +rfs(20px, border-radius)
+    &:after
+      position: absolute
+      // z-index: -1
+      // top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      height: 50%
+      content: ''
+      background-image: linear-gradient(to bottom, rgba(31, 153, 63, 0) 0%, #1f993f 100%)
+      border-radius: 0 0 20px 20px
     img
       display: block
       width: 100%
       height: 100%
       object-fit: cover
       object-position: 50%
-
-  &__row
-    padding-top: ($pm / 2)
-    padding-bottom: ($pm / 2)
-    +mq($small)
-      padding-top: $pm
-      padding-bottom: $pm
-  // &__content
-  // &__sidebar
-
-  &__slide
-    padding-right: 8px
-    padding-left: 8px
-    // height: 189px
-    text-align: left
-    +mq($small)
-      padding-right: 16px
-      padding-left: 16px
+      // border-radius: 20px
+      +rfs(20px, border-radius)
 
   &__link
-    // position: relative
-
+    position: relative
     height: 100%
-    display: block
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
     color: #000
     text-decoration: none
 
-    &:hover
-      .blog-slider__name
-        color: #6a7bff
-        +tr(.3s linear)
-
-      .blog-slider__name-icon
-        color: #6a7bff
-        opacity: 1
-        +tr(.3s linear)
-
-
-  &__image
-    position: relative
-    margin-bottom: 16px
-
-    img
-      display: block
-      width: 100%
-      height: 100%
-      object-fit: cover
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.54) 100%, rgba(0, 0, 0, 0.62) 100%)
-
-  &__name
-    position: relative
-    margin-bottom: 16px
-    padding-right: 56px
-    min-height: 56px
-    font-size: 22px
-    font-weight: 500
-    letter-spacing: -0.44px
-    line-height: normal
-    text-align: left
-
-  &__name-icon
-    position: absolute
-    top: 6px
-    right: 0
-    opacity: 0
-    width: 16px
-    height: 16px
-    +tr(.3s linear)
-
-  &__text
-    margin-bottom: 12px
-    font-size: 16px
-    font-weight: 400
-    letter-spacing: -0.32px
-    line-height: 1.375
-
-  &__date
-    color: rgba(0, 0, 0, .5)
-    font-size: 14px
-    font-weight: 400
-    line-height: normal
-
-
-  &__controls
+    // &:hover
+  &__title
     position: relative
     z-index: 1
-    margin-top: 32px
-    padding-right: 24px
-    padding-left: 24px
-    max-width: 100%
-    width: 100%
-    align-items: center
-    +mq($small)
-      display: none
-
-  &__scrollbar
-    width: 100%
-    height: 2px
-    flex-grow: 1
-    flex-shrink: 0
-    background-color: rgba(46, 58, 89, .2)
-
-    .swiper-scrollbar-drag
-      background-color: #6a7bff
-
-
-.article_archive
-
-  .article__item
-    margin-bottom: 30px
-    // height: 189px
-    text-align: left
-  //+mq($small)
-  .article__link
-    // position: relative
-
-    height: 100%
-    display: block
-    color: #000
-    text-decoration: none
-
-    &:hover
-      .article__name
-        color: #6a7bff
-        +tr(.3s linear)
-
-      .article__name-icon
-        color: #6a7bff
-        opacity: 1
-        +tr(.3s linear)
-
-  .article__image-w
-    position: relative
-    margin-bottom: 16px
-    min-height: 160px
-    background: rgba(0, 0, 0, .2)
-
-  .article__image
-    position: absolute
-    display: block
-    width: 100%
-    height: 100%
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.54) 100%, rgba(0, 0, 0, 0.62) 100%)
-    object-fit: cover
-    object-position: 0 50%
-
-  .article__name
-    position: relative
-    margin-bottom: 16px
-    padding-right: 56px
-    min-height: 56px
-    font-size: 22px
-    font-weight: 500
-    letter-spacing: -0.44px
-    line-height: normal
-    text-align: left
-
-  .article__name-icon
-    position: absolute
-    top: 6px
-    right: 0
-    opacity: 0
-    width: 16px
-    height: 16px
-    +tr(.3s linear)
-
-  .article__text
-    margin-bottom: 12px
-    font-size: 16px
-    font-weight: 400
-    letter-spacing: -0.32px
-    line-height: 1.375
-
-  .article__date
-    color: rgba(0, 0, 0, .5)
-    font-size: 14px
-    font-weight: 400
-    line-height: normal
-
-
-.article_taxonomy
-  .article__item
-    margin-bottom: 16px
-    // height: 189px
-    // +mq($small)
-    //   margin-bottom: 0
-
-  .article__link
-    position: relative
-
-    height: 100%
-    display: block
-    text-decoration: none
-
-    &:after
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      content: ''
-      background-color: rgba(0, 0, 0, .3)
-
-  .article__image-w
-    // position: relative
-    height: 190px
-
-  .article__image
-    // position: absolute
-    display: block
-    width: 100%
-    height: 100%
-    object-fit: cover
-    object-position: 0 100%
-
-  .article__name
-    position: absolute
-    z-index: 1
-    bottom: 0
-    left: 0
-    right: 0
-    margin-top: 7px
-    padding-right: 18px
-    padding-bottom: 18px
-    padding-left: 18px
+    // +padding-top(45px)
+    +padding-right(37px)
+    +padding-bottom(45px)
+    +padding-left(37px)
     color: #ffffff
-    font-size: 22px
-    font-weight: 500
-    letter-spacing: -0.44px
-    line-height: normal
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.35)
+    font-family: $b
+    +font-size(36px)
+    font-weight: 700
+    // letter-spacing: 0.72px
+
+    +rfs(0.72px, letter-spacing)
+    // line-height: 58.5px
+    +rfs(1.6, line-height)

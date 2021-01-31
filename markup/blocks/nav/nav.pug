@@ -1,12 +1,16 @@
 mixin nav(data)
-    nav.nav&attributes(attributes)
-        .nav__container.container
-            ul.nav__list.flex
-                li.nav__item
-                    a.nav__link(href="#") Home
-                li.nav__item
-                    a.nav__link(href="#") Resort
-                li.nav__item
-                    a.nav__link(href="#") Contact
-                li.nav__item.nav__item_active
-                    a.nav__link(href="#") Article
+  nav.nav&attributes(attributes)
+    //- .nav__container.container
+    ul.nav__list.flex
+      li.nav__item
+        a.nav__link(href="#") Дома
+      li.nav__item
+        a.nav__link(href="#") Цены
+      li.nav__item
+        a.nav__link(href="#") Скидки
+      li.nav__item
+        a.nav__link(href="#") Русская баня
+      li.nav__item
+        a.nav__link(href="#") Карта
+      li.nav__item.nav__item_active
+        a.nav__link(href="#") О нас

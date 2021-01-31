@@ -1,0 +1,15 @@
+mixin booking-form(data)
+    .booking-form&attributes(attributes)
+      .booking-form__in
+        form.form(action="")
+          .form__group
+            input.form__input(type="text" value="" placeholder="Дата заезда")
+            != pugHelpers.Icon.call(locals, {iconName: 'date-icon', className: 'form__icon'})
+          .form__group
+            input.form__input(type="text" value="" placeholder="Дата отъезда")
+            != pugHelpers.Icon.call(locals, {iconName: 'date-icon', className: 'form__icon'})
+
+          .form__group.form__group_phone
+            input.form__input(type="text" value="" placeholder="Телефон для связи")
+
+          input.form__submit.button(type="submit", value="Отправить запрос")

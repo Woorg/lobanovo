@@ -1,0 +1,29 @@
+.about
+  overflow: hidden
+  &__container
+    +padding-top(75px)
+    +padding-bottom(75px)
+
+  &__image
+    img
+      display: block
+
+  &__title
+    margin-bottom: 33px
+  &__text
+    margin-bottom: 57px
+    // max-width: 870px
+    +rfs(870px ,max-width)
+
+  &__articles
+    +margin-right(-18px)
+    +margin-left(-18px)
+    display: flex
+    flex-wrap: wrap
+
+  &__article
+    margin-bottom: 38px
+    margin-right: 18px
+    margin-left: 18px
+    max-width: 30.7%
+    width: 100%

@@ -1,18 +1,17 @@
 .header
-  position: fixed
+  position: absolute
   z-index: 3
   top: 0
   left: 0
   right: 0
-  background-color: rgba(255, 255, 255, .2)
-  // background-color: #000
   +tr(.3s linear)
 
   &__container
-    height: 60px
     flex-wrap: wrap
     align-items: center
     +mq($large)
+      padding-top: 11px
+      padding-bottom: 11px
       flex-wrap: nowrap
 
   &__logo
@@ -21,64 +20,19 @@
     +mq($small)
       padding-top: 10px
       padding-bottom: 10px
+      // max-width: 245px
+      +rfs(245px, max-width)
+      width: 100%
 
-  &__title
-    display: none
-    +mq($small)
-      padding-left: 23px
-      display: flex
-      color: #1f1f1f
-      font-size: 18px
-      font-weight: 700
-      letter-spacing: -0.36px
-      line-height: normal
-
+  &__nav
+    // max-width: 710px
+    +rfs(710px, max-width)
+    width: 100%
 
   &__nav-trigger
     margin-left: auto
 
-
-.header_inner
-  .nav-trigger
-    +mq($small)
-      border-left: 1px solid #b4bdff
-
-.header_inner,
-.header_scrolled,
-.header_open
-  background-color: rgba(255, 255, 255, 1)
-  +tr(.3s linear)
-
-  .logo
-    &:hover
-        .logo__word
-            color: darken(#1f1f1f, 10)
-
-        .logo__word_first
-            color: darken(#6a7bff, 10)
-
-    .logo__word
-      color: #1f1f1f
-      // font-size: 24px
-
-    .logo__word_first
-      color: #6a7bff
-
-  .nav-trigger
-    color: #000000
-
-
-.header_inner
-  border-bottom: 1px solid #b4bdff
-
-  .logo
-    position: relative
-    padding-right: 22px
-    &:after
-      position: absolute
-      +mq($small)
-        top: -5px
-        right: 0
-        bottom: -5px
-        content: ""
-        border-right: 1px solid #b4bdff
+  &__phone
+    // max-width: 270px
+    +rfs(270px, max-width)
+    width: 100%
