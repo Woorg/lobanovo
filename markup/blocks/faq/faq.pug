@@ -1,0 +1,28 @@
+mixin faq(data)
+  section.faq
+    .faq__container.container
+      h2.faq__title.title.title_reg <span>Вопросы</span> и ответы
+
+      .faq__list
+        details.faq__item(open)
+          summary.faq__question Как проехать из Москвы на машине?
+            | <svg class="faq__arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 0.999999L9 9L1 1" stroke="currentColor" stroke-width="2"/></svg>
+
+
+            != pugHelpers.Icon.call(locals, {iconName: 'question-icon', className: 'faq__icon'})
+
+          .faq__answer
+            p По Киевскому шоссе до развязки направо на Малоярославец - Медынь - Юхнов (трасса А-101 "Москва - Рославль") GPS-координаты - <strong>54.9803924; 36.493984</strong>
+            p Едем через Медынь на Юхнов по главной дороге. Проезжаем Юхнов до развякзи до трассы Р-132 "Калуга - Вязьма". <br/>На этой развязке едем налево на Калугу до д. Пречистое. В д. Пречистое поворачиваем налево <br/><strong>GPS-координаты 54.707622; 35.263917</strong>
+            p и по грунтовой дороге с щебеночным покрытием едем через д. Пречистое до д. Чемоданово (11 км) до въезда <br/>в деревню (автобусная остановка - точка встречи) <strong>GPS - координаты 54,6327954; 35,521606</strong>
+
+        details.faq__item
+          summary.faq__question Как проехать из Москвы на машине?
+            | <svg class="faq__arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 0.999999L9 9L1 1" stroke="#333333" stroke-width="2"/></svg>
+
+            != pugHelpers.Icon.call(locals, {iconName: 'question-icon', className: 'faq__icon'})
+
+          .faq__answer
+            p По Киевскому шоссе до развязки направо на Малоярославец - Медынь - Юхнов (трасса А-101 "Москва - Рославль") GPS-координаты - <strong>54.9803924; 36.493984</strong>
+            p Едем через Медынь на Юхнов по главной дороге. Проезжаем Юхнов до развякзи до трассы Р-132 "Калуга - Вязьма". <br/>На этой развязке едем налево на Калугу до д. Пречистое. В д. Пречистое поворачиваем налево <br/><strong>GPS-координаты 54.707622; 35.263917</strong>
+            p и по грунтовой дороге с щебеночным покрытием едем через д. Пречистое до д. Чемоданово (11 км) до въезда <br/>в деревню (автобусная остановка - точка встречи) <strong>GPS - координаты 54,6327954; 35,521606</strong>

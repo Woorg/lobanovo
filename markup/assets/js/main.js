@@ -1,6 +1,7 @@
 import svg4everybody from 'svg4everybody';
-import Swiper, {Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay} from 'swiper';
+import Swiper, {Pagination, Navigation, Controller, EffectFlip, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay, Keyboard, Mousewheel} from 'swiper';
 import Tabby from 'tabbyjs';
+// import mask from "jquery-mask-plugin";
 
 (function ($) {
 
@@ -97,15 +98,13 @@ import Tabby from 'tabbyjs';
 
 
      // configure Swiper to use modules
-    Swiper.use([Pagination, Navigation, Controller, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay]);
+    Swiper.use([Pagination, Navigation, Controller, EffectFlip, EffectFade, Lazy, Scrollbar, Thumbs, Autoplay, Keyboard, Mousewheel]);
 
     const $sliderSwiper = new Swiper('.slider__in', {
       direction: 'horizontal',
-      loop: true,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      loop: false,
+      // effect: 'fade',
+
       slidesPerView: 1,
       pagination: {
         el: '.slider__pagination',
@@ -125,14 +124,210 @@ import Tabby from 'tabbyjs';
 
     });
 
+
+    const $heroThumbs = $('.choose-popup__col_desc .choose-popup__thumbs');
+
+    const $heroSwiper = new Swiper('.choose-popup__col_desc .choose-popup__slider', {
+      direction: 'horizontal',
+      // effect: 'fade',
+      slidesPerView: 1,
+      loop: false,
+      paginationClickable: true,
+      preloadImages: true,
+      observer: true,
+      observeParents: true,
+
+    });
+
+
+    if ($heroThumbs.length > 0) {
+
+      const $heroSwiperThumbs = new Swiper('.choose-popup__col_desc .choose-popup__thumbs', {
+        setWrapperSize: true,
+        initialSlide: 0,
+        loop: false,
+        simulateTouch: true,
+        slideToClickedSlide: true,
+        preventClicks: true,
+        centeredSlides: true,
+        // roundLengths: true,
+        slidesPerView: 'auto',
+        allowTouchMove: true,
+        updateOnWindowResize: true,
+        slidesPerColumnFill: 'row',
+        preloadImages: true,
+        slidesPerColumn: 1,
+        observer: true,
+        observeParents: true,
+        init: true,
+        breakpoints: {
+          0: {
+          },
+          1100: {
+          }
+        }
+
+      });
+
+      $heroSwiper.controller.control = $heroSwiperThumbs;
+      $heroSwiperThumbs.controller.control = $heroSwiper;
+
+    }
+
+
+
+
+
+    const $heroThumbsMob = $('.choose-popup__col_shrink .choose-popup__thumbs');
+
+    const $heroSwiperMob = new Swiper('.choose-popup__col_shrink .choose-popup__slider', {
+      direction: 'horizontal',
+      // effect: 'fade',
+      slidesPerView: 1,
+      loop: false,
+      paginationClickable: true,
+      preloadImages: true,
+      observer: true,
+      observeParents: true,
+
+    });
+
+
+    if ($heroThumbsMob.length > 0) {
+
+      const $heroSwiperThumbsMob = new Swiper('.choose-popup__col_shrink .choose-popup__thumbs', {
+        setWrapperSize: true,
+        initialSlide: 0,
+        loop: false,
+        simulateTouch: true,
+        slideToClickedSlide: true,
+        preventClicks: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        updateOnWindowResize: true,
+        allowTouchMove: true,
+        observer: true,
+        observeParents: true,
+        roundLengths: true,
+        slidesPerColumnFill: 'row',
+        slidesPerColumn: 1,
+        init: true,
+        preloadImages: true,
+        breakpoints: {
+          0: {
+          },
+          1100: {
+          }
+        }
+
+      });
+
+      $heroSwiperMob.controller.control = $heroSwiperThumbsMob;
+      $heroSwiperThumbsMob.controller.control = $heroSwiperMob;
+
+
+    }
+
+
+
+
+
+
+    // breakpoint where swiper will be destroyed
+    // and switches to a dual-column layout
+    const breakpoint = window.matchMedia( '(min-width:640px)' );
+
+    // keep track of swiper instances to destroy later
+    let mySwiper;
+
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+
+    const breakpointChecker = function() {
+
+      // if larger viewport and multi-row layout needed
+      if ( breakpoint.matches === true ) {
+
+        // clean up old instances and inline styles when available
+      if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+
+      // or/and do nothing
+      return;
+
+        // else if a small viewport and single column layout needed
+        } else if ( breakpoint.matches === false ) {
+
+          // fire small viewport version of swiper
+          return enableSwiper();
+
+        }
+
+    };
+
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////
+
+    const enableSwiper = function() {
+
+      mySwiper = new Swiper ('.gallery__images', {
+        direction: 'horizontal',
+        loop: true,
+        // effect: 'fade',
+        slidesPerView: 1.5,
+        navigation: {
+          nextEl: '.gallery__button_next',
+          prevEl: '.gallery__button_prev',
+        },
+
+        lazy: true,
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 1,
+        },
+
+      });
+
+    };
+
+
+    // keep an eye on viewport size changes
+    breakpoint.addListener(breakpointChecker);
+
+    // kickstart
+    breakpointChecker();
+
+
+
     // Gallery
 
-    $('.content__side_mob .sidebar__image').magnificPopup({
-      type: 'image',
-      gallery: {
-        enabled: true
-      }
+    // $('.content__side_mob .sidebar__image').magnificPopup({
+    //   type: 'image',
+    //   gallery: {
+    //     enabled: true
+    //   }
+    // });
+
+
+    // Popup
+
+    $('.open-popup').magnificPopup({
+      type: 'inline',
+      midClick: true
     });
+
+
+    /**
+     * Magnific
+     */
+
+    // $('.gallery__link').magnificPopup({
+    //   type: 'image',
+    //   gallery:{
+    //     enabled:true
+    //   }
+    // })
 
 
     /**
@@ -166,16 +361,160 @@ import Tabby from 'tabbyjs';
       const tabs = new Tabby('.tabs__nav');
     }
 
+
+
     /**
-     * Magnific
+     * Video slider
      */
 
-    $('.gallery__link').magnificPopup({
-      type: 'image',
-      gallery:{
-        enabled:true
+    const $videoSwiper = new Swiper('.video__slider', {
+      direction: 'horizontal',
+      loop: true,
+      // effect: 'fade',
+      // slidesPerView: 2.1,
+      centeredSlides: true,
+      preventClicks: true,
+      // spaceBetween: 70,
+      navigation: {
+        nextEl: '.video__nav-button_next',
+        prevEl: '.video__nav-button_prev',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      // lazy: true,
+      // lazy: {
+      //   loadPrevNext: true,
+      //   loadPrevNextAmount: 3,
+      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        480: {
+          slidesPerView: 2,
+        },
+        640: {
+          slidesPerView: 2.1,
+        }
+      },
+
+    });
+
+
+      /**
+      * Change Video to Iframe
+      */
+
+      function findVideos() {
+          let videos = document.querySelectorAll('.video__slide');
+
+          for (let i = 0; i < videos.length; i++) {
+              setupVideo(videos[i]);
+          }
       }
-    })
+
+      function setupVideo(video) {
+          let link   = video.querySelector('.video__link');
+          let media  = video.querySelector('.video__media');
+          let button = video.querySelector('.video__button');
+          let title  = video.querySelector('.video__slide-title');
+
+          let id = parseMediaURL(media);
+          let $video = video.querySelector('.video__slide-in');
+          // let $videoActive = document.querySelector('.swiper-slide-active');
+
+          $video.addEventListener('click', () => {
+              console.log('click');
+              let iframe = createIframe(id);
+
+              title.remove();
+              link.remove();
+              button.remove();
+              $video.appendChild(iframe);
+          });
+
+          link.removeAttribute('href');
+          video.classList.add('video__slide_enabled');
+      }
+
+      function parseMediaURL(media) {
+          let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+          let url = media.src;
+          let match = url.match(regexp);
+
+          return match[1];
+      }
+
+      function createIframe(id) {
+          let iframe = document.createElement('iframe');
+
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('allow', 'autoplay');
+          iframe.setAttribute('src', generateURL(id));
+          iframe.classList.add('video__media');
+
+          return iframe;
+      }
+
+      function generateURL(id) {
+          let query = '?rel=0&showinfo=0&autoplay=1&playsinline=1';
+
+          return 'https://www.youtube.com/embed/' + id + query;
+      }
+
+      findVideos();
+
+
+    /**
+     * Feedback slider
+     */
+
+    const $feedbackSwiper = new Swiper('.feedback__slider', {
+      direction: 'horizontal',
+      loop: true,
+      // effect: 'fade',
+      centeredSlides: true,
+      preventClicks: true,
+      // spaceBetween: 70,
+      navigation: {
+        nextEl: '.feedback__nav-button_next',
+        prevEl: '.feedback__nav-button_prev',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+        },
+        480: {
+          slidesPerView: 1.3,
+        },
+        640: {
+          slidesPerView: 1.6,
+        }
+      },
+      lazy: true,
+      lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 3,
+      },
+
+    });
+
+
+    // Phone Mask
+
+    $('.form__group_phone input').mask("+ 7 (999) 999-99-99", {
+      placeholder: "Телефон для связи"
+    });
+
+
+
+
 
     // List pages
 
@@ -191,9 +530,7 @@ import Tabby from 'tabbyjs';
 
     pageWidget([
       'index',
-      'resort',
-      // 'article',
-      // 'contact-us',
+      'houses',
     ]);
 
 

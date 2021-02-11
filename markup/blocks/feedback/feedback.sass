@@ -1,1 +1,200 @@
+.feedback
+  background-color: #fafafa
+  &__container
+    +padding-top(25px)
+    +mq($small)
+      +padding-top(135px)
+    // +padding-bottom(15px)
 
+  &__title
+    +margin-bottom(15px)
+
+    +mq($small)
+      +margin-bottom(30px)
+
+  &__slider
+    position: relative
+  &__slider-w
+    +mq($small)
+      +margin-right(-16px)
+      +margin-left(-16px)
+
+  &__slide
+    +padding-right(20px)
+    +padding-left(20px)
+    +padding-bottom(20px)
+    +mq($medium)
+      +padding-top(20px)
+      +padding-right(16px)
+      +padding-left(16px)
+
+  &__slide-in
+    +padding-top(25px)
+    +padding-right(20px)
+    +padding-bottom(25px)
+    +padding-left(20px)
+    // width: 280px
+    height: 562px
+    background-color: #ffffff
+    border-radius: 5px
+    box-shadow: 0 6px 20px rgba(53, 60, 54, 0.1)
+    +mq($medium)
+      +padding-top(45px)
+      +padding-right(54px)
+      +padding-bottom(45px)
+      +padding-left(54px)
+      display: flex
+      height: 325px
+
+
+
+  &__col
+    +mq($medium)
+      max-width: 200px
+      width: 100%
+      flex-grow: 1
+  &__col_wide
+    // max-width: 800px
+    max-width: 100%
+    // width: auto
+
+  &__photo
+    margin-top: -24px
+    margin-left: -20px
+    width: 280px
+    height: 192px
+    background-color: #ffffff
+    border-radius: 5px
+    overflow: hidden
+    +mq($medium)
+      margin-top: 24px
+      margin-left: 20px
+      width: 140px
+      height: 140px
+      border-radius: 50%
+    img
+      width: 100%
+      height: 100%
+      display: block
+      object-fit: cover
+      object-position: 50%
+      border-radius: 5px
+
+      +mq($medium)
+        border-radius: 50%
+
+  &__meta
+    position: relative
+    +margin-top(26px)
+    +margin-bottom(4px)
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+    +mq($medium)
+      +margin-top(0)
+
+  &__badge
+    position: absolute
+    top: 3px
+    right: 0
+
+  &__social
+    margin-top: 30px
+    display: none
+    +mq($medium)
+      display: flex
+
+  &__social_mob
+    display: flex
+    +mq($medium)
+      display: none
+    .social__item,
+    .social__icon
+      width: 33px
+      height: 32px
+    .social__link
+      width: 100%
+
+  &__name
+    max-width: 60%
+    width: 100%
+    color: #323232
+    +font-size(16px)
+    font-weight: 800
+    +rfs(1.625, line-height)
+
+    +mq($medium)
+      +font-size(22px)
+      +rfs(1.181, line-height)
+
+  &__city
+    width: 100%
+    color: #c5c5c5
+    +font-size(12px)
+    font-weight: 300
+
+    +mq($medium)
+      +margin-bottom(20px)
+      font-size: 14px
+      line-height: 1
+
+  &__text
+    color: #323232
+    font-weight: 400
+    +font-size(12px)
+    +rfs(1.5, line-height)
+    +mq($medium)
+      height: 200px
+      overflow: hidden
+      +font-size(18px)
+      +rfs(1.444, line-height)
+
+
+  &__nav
+    position: relative
+    +margin-top(20px)
+    +padding-bottom(35px)
+    padding-bottom: 0
+    display: flex
+    justify-content: space-between
+    +mq($medium)
+      +margin-top(40px)
+      +padding-bottom(75px)
+    &.container
+      +padding-bottom(35px)
+      +mq($medium)
+        +padding-bottom(135px)
+
+
+  &__nav-button
+    +resetbutton()
+    display: flex
+    align-items: center
+    color: #333333
+
+    font-weight: 700
+    +font-size(12px)
+    +rfs(1, line-height)
+    +mq($medium)
+      +font-size(18px)
+      +rfs(1.444, line-height)
+
+  &__nav-icon
+    width: 28px
+    height: 16px
+    +mq($medium)
+      width: 42px
+      height: 16px
+
+  &__nav-button_prev
+    .feedback__nav-icon
+      +margin-right(11px)
+      +mq($medium)
+        +margin-right(23px)
+  &__nav-button_next
+    .feedback__nav-icon
+      +margin-left(11px)
+      transform: rotate(180deg)
+      +mq($medium)
+        +margin-left(23px)

@@ -1,23 +1,23 @@
 .nav-trigger
+  position: relative
+  z-index: 1
   +resetbutton()
-  border-left: 1px solid transparent
   width: 50px
   height: 100%
   color: $white
   text-align: right
 
-  &__open,
-  &__close
+  &__open
     display: inline
-    width: 20px
+    width: 30px
     height: 20px
     +tr(.3s ease)
 
-  &__close
-    display: none
+  // &__close
+    // display: none
 
-.nav-trigger_active
-  .nav-trigger__open
-    display: none
-  .nav-trigger__close
-    display: inline
+// .nav-trigger_active
+//   .nav-trigger__open
+//     display: none
+//   .nav-trigger__close
+//     display: inline

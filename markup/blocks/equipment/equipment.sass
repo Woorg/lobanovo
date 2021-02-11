@@ -1,54 +1,100 @@
 .equipment
   &__container
-    +padding-top(75px)
-    +padding-bottom(75px)
+    // +padding-top(30px)
+    +padding-bottom(30px)
+    +mq($medium)
+      +padding-top(75px)
+      +padding-bottom(75px)
+
   &__title
-    +margin-bottom(35px)
+    +margin-bottom(7px)
+    +mq($medium)
+      +margin-bottom(48px)
   &__text
-    +margin-bottom(58px)
+    +margin-bottom(108px)
+    line-height: 1
+    +rfs(.22px, letter-spacing)
+    +mq($small)
+      +margin-bottom(58px)
+      +margin-left(4px)
 
   &__w
     position: relative
-    +padding-top(90px)
-    +padding-bottom(90px)
-    +padding-left(73px)
-    // max-width: 1365px
-    +rfs(1365px, max-width)
+    padding-top: 0
+    +padding-right(20px)
+    // +padding-bottom(85px)
+    +padding-left(20px)
     width: 100%
-    // min-height: 582px
-    +rfs(582px, min-height)
+    // height: 526px
+    min-height: 526px
+    // +rfs(636px, min-height)
     display: flex
-    flex-wrap: wrap
-    background: url('../images/general/equipment-bg.svg') 0 0 no-repeat
+    // flex-wrap: wrap
+    flex-direction: column
+    justify-content: flex-start
+    // align-items: center
+    background: url('../images/general/equipment-bg-mob.svg') 0 100% no-repeat
     background-size: cover
-
+    border-radius: 8px 8px 0 0
+    +mq($medium)
+      +padding-top(90px)
+      +padding-bottom(90px)
+      +padding-left(40px)
+      max-width: 1365px
+      width: 100%
+      min-height: 582px
+      flex-direction: row
+      flex-wrap: wrap
+      background: url('../images/general/equipment-bg.svg') 0 100% no-repeat
+      background-size: cover
+    +mq($large)
+      +padding-top(92px)
+      +padding-bottom(90px)
+      +padding-left(76px)
   &__list
-    +rfs(660px, max-width)
+    margin-top: -40px
     width: 100%
+    +mq($medium)
+      +rfs(440px, max-width)
+    +mq($large)
+      margin-top: 0
+      +rfs(600px, max-width)
 
   &__item
-    +margin-bottom(36px)
+    +margin-bottom(12px)
+    +mq($medium)
+      +margin-bottom(48px)
     &:last-child
       margin-bottom: 0
 
   &__item_active
     .equipment__link
+      padding-left: 8px
       color: #9aff00
       +tr(.3s linear)
+      +mq($medium)
+        padding-left: 0
       &:after
         visibility: visible
         opacity: 1
         +tr(opacity .3s linear)
+
   &__link
     position: relative
     display: block
     color: #ffffff
-    +font-size(18px)
     font-weight: 700
-    // line-height: 25px
-    +rfs(1.39, line-height)
+    +font-size(12px)
+    +rfs(1.166, line-height)
     +tr(.3s linear)
+    +mq($medium)
+      padding-left: 0
+      +font-size(17px)
+      +rfs(1.39, line-height)
+      +rfs(0.05px, letter-spacing)
+
     &:hover
+      padding-left: 8px
       color: #9aff00
       +tr(.3s linear)
       &:after
@@ -59,56 +105,105 @@
     &:after
       position: absolute
       top: 50%
-      left: -12px
-      width: 8px
-      height: 41px
+      left: 0
       content: ''
+      width: 4px
+      height: 30px
       visibility: hidden
       background-color: #a3e440
       opacity: 0
       transform: translateY(-50%)
       +tr(opacity .3s linear)
+      +mq($medium)
+        left: -12px
+        width: 8px
+        height: 41px
 
-  &__image
-    position: absolute
-    top: -50px
-    right: 90px
-    width: 450px
-    height: 479px
+  &__image-w
+    position: relative
+    top: -42px
+    margin-right: auto
+    margin-bottom: 15px
+    margin-left: auto
+    width: 240px
+    height: 240px
+    order: -1
     background-color: #ffffff
     background-size: cover
+    border-radius: 3px
+    overflow: hidden
+    +mq($medium)
+      position: absolute
+      top: -50px
+      +rfs(40px, right)
+      margin-top: 0
+      margin-bottom: 0
+      order: 1
+      width: 450px
+      height: 479px
+      border-radius: none
+    +mq($large)
+      +rfs(90px, right)
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
 
   &__scheme
     position: absolute
-    top: 5px
-    left: 6px
+    top: 0px
+    left: 4px
+    width: 232px
+    height: auto
     // opacity: 0
     +tr(.3s linear)
+    +mq($medium)
+      top: 5px
+      left: 6px
+      width: auto
+      height: auto
 
   &__additional
-    +margin-top(110px)
+    +margin-top(20px)
+    +mq($medium)
+      +margin-top(110px)
 
   &__additional-title
-    +margin-bottom(20px)
+    +margin-bottom(10px)
+    +mq($medium)
+      +margin-bottom(20px)
+
+
   &__additional-list
     display: flex
     flex-wrap: wrap
   &__additional-item
     border-bottom: 1px solid #ececec
-    +margin-right(120px)
-    +padding-top(26px)
-    +padding-bottom(26px)
+    +padding-top(9px)
+    +padding-bottom(9px)
     // max-width: 540px
-    +rfs(540px, max-width)
     width: 100%
     color: #333333
-    +font-size(18px)
+    +font-size(12px)
     font-weight: 600
-    // line-height: 1.444
-    +rfs(1.444, line-height)
+    +rfs(1.166, line-height)
+
+    +mq($medium)
+      +margin-right(120px)
+      +padding-top(26px)
+      +padding-bottom(28px)
+      +rfs(540px, max-width)
+
+      +font-size(18px)
+      font-weight: 600
+      +rfs(1.444, line-height)
+
+
     &:last-child
       margin-right: 0
     span
+
       color: #229c3f
       font-family: $n
       font-weight: 600
+      // +mq($medium)

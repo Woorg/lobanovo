@@ -1,94 +1,23 @@
-include ../breadcrumbs/breadcrumbs.pug
 
 mixin content(data)
-    section.content&attributes(attributes)
-        +breadcrumbs().content__breadcrumbs
-        h1.content__title.title.title_big Weekend in the best resort of the Carpathians
-        .content__text.text
-            p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants. Away from all the letters they live in houses on the banks of the Semantics, a large language ocean. A small stream of Dal murmurs throughout the country and provides it with all the necessary rules. This paradigmatic country in which the sentence fried fly directly into the mouth. Even the omnipotent punctuation has no power over fish texts that lead a non-morphographic way of life. One day, a small line of fish text named Lorem ipsum decided to go out into the big world of grammar. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver.
+  section.content&attributes(attributes)
+    .content__container.container
+      .content__text.text
+        p Мифопоэтическое пространство самопроизвольно. Дольник разрушаем. Комбинаторное приращение, в первом приближении, семантически осознаёт ритмический рисунок. Эстетическое воздействие, чтобы уловить хореический ритм или аллитерацию на "л", дает анапест.
 
+        p Диалогичность, чтобы уловить хореический ритм или аллитерацию на "л", аллитерирует цикл. Скрытый смысл, соприкоснувшись в чем-то со своим главным антагонистом в постструктурной поэтике, иллюстрирует пастиш. Акцент осознаёт урбанистический анжамбеман. Аллегория наблюдаема. Быличка, если уловить хореический ритм или аллитерацию на "р", диссонирует диссонансный анапест, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией. Стиль интегрирует былинный метр.
 
-        +sidebar().content__side.content__side_mob
+        p Филологическое суждение семантически начинает мифопоэтический хронотоп. Правило альтернанса, согласно традиционным представлениям, редуцирует симулякр. Стихотворение начинает акцент, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания. Анжамбеман нивелирует зачин.
 
+        .gallery
+          .gallery__item
+            img(src='assets/images/content/content-img-1.jpg', alt='')
+          .gallery__item
+            img(src='assets/images/content/content-img-1.jpg', alt='')
 
-        .content__related.blog-slider.related-slider
-            .blog-slider__top.flex
-                h2.blog-slider__title.title Guide posts
-                .blog-slider__buttons.flex
-                    button.blog-slider__button.blog-slider__button_prev
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'blog-slider__button-icon'})
-                    button.blog-slider__button.blog-slider__button_next
-                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-slider', className: 'blog-slider__button-icon'})
-            .blog-slider__slider.swiper-container
-                .swiper-wrapper
-                    .blog-slider__slide.swiper-slide
-                        a.blog-slider__link(href="#")
-                            .blog-slider__image
-                                img.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
-                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+        p Правило альтернанса нивелирует поток сознания, однако дальнейшее развитие приемов декодирования мы находим в работах академика В.Виноградова. Если архаический миф не знал противопоставления реальности тексту,  метонимия притягивает голос персонажа. Логоэпистема просветляет поэтический анапест.
 
-                            .blog-slider__name Spending 1 week in courchevel
-                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
-                            .blog-slider__text Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
-                            .blog-slider__date 20 nov 2020
+        p Из приведенных текстуальных фрагментов видно, как модальность высказывания отражает резкий контрапункт, именно об этом говорил Б.В.Томашевский в своей работе 1925 года. Аффилиация выбирает анапест. Несобственно-прямая речь, соприкоснувшись в чем-то со своим главным антагонистом в постструктурной поэтике, возможна.
 
-                    .blog-slider__slide.swiper-slide
-                        a.blog-slider__link(href="#")
-                            .blog-slider__image
-                                img.swiper-lazy(data-src="assets/images/content/blog-img-1.jpg", alt="")
-                                .swiper-lazy-preloader.swiper-lazy-preloader-white
-
-                            .blog-slider__name Choosing a ski school for share your experience
-                                != pugHelpers.Icon.call(locals, {iconName: 'ext-link-arrow', className: 'blog-slider__name-icon'})
-                            .blog-slider__text Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants.
-                            .blog-slider__date 20 nov 2020
-
-                .blog-slider__controls.flex
-                    .blog-slider__scrollbar
-
-        .content__reviews
-            h2.content__reviews-title.title User reviews
-
-
-mixin content-article(data)
-    section.content&attributes(attributes)
-        +breadcrumbs-article().content__breadcrumbs
-        h1.content__title.title.title_big Weekend in the best resort of the Carpathians
-        .content__text.text
-            p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants. Away from all the letters they live in houses on the banks of the Semantics, a large language ocean. A small stream of Dal murmurs throughout the country and provides it with all the necessary rules. This paradigmatic country in which the sentence fried fly directly into the mouth. Even the omnipotent punctuation has no power over fish texts that lead a non-morphographic way of life. One day, a small line of fish text named Lorem ipsum decided to go out into the big world of grammar. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver.
-
-            img(src="assets/images/content/article-img.jpg", alt="")
-
-            h2 Weekend in the best resort
-
-            p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants. Away from all the letters they live in houses on the banks of the Semantics, a large language ocean. A small stream of Dal murmurs throughout the country and provides it with all the necessary rules. This paradigmatic country in which the sentence fried fly directly into the mouth. Even the omnipotent punctuation has no power over fish texts that lead a non-morphographic way of life. One day, a small line of fish text named Lorem ipsum decided to go out into the big world of grammar. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver. The great Oxmox had warned her about evil commas, wild question marks, and insidious semicolons, but the text didn't let her get confused. He gathered up his seven capital letters, belted the initial in his belt, and set off. Climbing the first ver.
-
-
-mixin content-contacts(data)
-    section.content&attributes(attributes)
-        +breadcrumbs-contacts().content__breadcrumbs
-        h1.content__title.title.title_big Contact us
-        .content__text.text
-            p Far, far beyond the mountains of words, fish texts live in the land of vowels and consonants. Away from all the letters they live in houses on the banks.
-
-        .content__form.form
-            form(action="")
-                .form__row.flex
-                    .form__field.form__field_input
-                        // label.form__label
-                            // span.form__label-text Name
-                        input.form__input(type="text" placeholder="Name")
-
-                    .form__field.form__field_input
-                        // label.form__label
-                            // span.form__label-text E-mail
-                        input.form__input(type="text" placeholder="E-mail")
-
-                .form__field.form__field_message
-                    // label.form__label
-                        // span.form__label-text Your message
-                    textarea.form__message(name="" placeholder="Your message")
-
-                input.form__submit.button(type="submit" value="Send")
-
+        p Аллегория представляет собой образ. Гиперцитата аллитерирует словесный дактиль. Различное расположение просветляет поэтический реципиент. Показательный пример –  эстетическое воздействие неумеренно начинает парафраз, хотя в существование или актуальность этого он не верит, а моделирует собственную реальность. Мифопоэтическое пространство, как бы это ни казалось парадоксальным, аннигилирует дискурс.
 

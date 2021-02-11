@@ -1,1 +1,195 @@
+.video
+  overflow: hidden
+  &__container
+    +padding-top(37px)
 
+    +mq($small)
+      +padding-top(75px)
+    // +padding-bottom(75px)
+  &__title
+    +margin-bottom(15px)
+    +mq($small)
+      +margin-bottom(30px)
+
+  // &__slider
+
+  // &__slider-w
+  //   +margin-right(-16px)
+  //   +margin-left(-16px)
+
+  &__slide
+    +mq($small)
+      +padding-top(50px)
+      +padding-bottom(120px)
+
+
+  &__slide-in
+    position: relative
+    // width: 883px
+    // height: 528px
+    width: 100%
+    height: 248px
+    // border-radius: 20px
+    transform: scale(.8)
+    +tr(.3s linear)
+    +rfs(10px, border-radius)
+    +mq($small)
+      +padding-top(59.8%)
+      +rfs(20px, border-radius)
+
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    // border-radius: 20px
+    overflow: hidden
+    +rfs(10px, border-radius)
+    +mq($small)
+      +rfs(20px, border-radius)
+
+  &__media,
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    border: none
+    width: 100%
+    height: 100%
+    // border-radius: 20px
+    background-color: #ffffff
+    +rfs(10px, border-radius)
+    +mq($small)
+      +rfs(20px, border-radius)
+
+
+
+  &__button
+    +resetbutton()
+    border: none
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: 50%
+    // display: none
+    transform: translate(-50%, -50%)
+    // +mq($small)
+    //   display: block
+
+  &__slide-title
+    position: absolute
+    z-index: 1
+    right: 0
+    bottom: 0
+    left: 0
+    +padding-right(40px)
+    +padding-bottom(66px)
+    +padding-left(40px)
+    color: #ffffff
+    font-family: $b
+    font-weight: 700
+    +font-size(20px)
+    +rfs(0.4px, letter-spacing)
+    +rfs(1.2, line-height)
+    +mq($small)
+      +padding-right(70px)
+      +padding-bottom(50px)
+      +padding-left(70px)
+      +font-size(36px)
+      +rfs(0.72px, letter-spacing)
+      +rfs(1.6, line-height)
+
+
+  &__slide_enabled
+
+    &.swiper-slide-active
+      .video__slide-in
+        cursor: pointer
+      .video__button
+        display: block
+
+  .swiper-slide-active
+    .video__slide-in
+      transform: scale(1)
+      +tr(.3s linear)
+      +mq($small)
+        box-shadow: 0 45px 90px rgba(53, 60, 54, 0.5)
+    .video__link
+      &:after
+        position: absolute
+        z-index: 1
+        bottom: 0
+        left: 0
+        content: ''
+        width: 100%
+        height: 50%
+        background-image: linear-gradient(to bottom, rgba(31, 153, 63, 0) 0%, #1f993f 100%)
+        // border-radius: 0 0 20px 20px
+        +rfs(0 0 10px 10px, border-radius)
+        +mq($small)
+          +rfs(0 0 20px 20px, border-radius)
+
+
+
+    .video__button
+      display: block
+
+  &__body
+    position: relative
+    +padding-bottom(25px)
+
+    +mq($small)
+      +padding-bottom(95px)
+    &:after,
+    &::before
+      position: absolute
+      z-index: 1
+      top: 0
+      content: ''
+      display: none
+      +rfs(367px, width)
+      +rfs(639px, height)
+      +mq($small)
+        display: block
+
+
+    &:after
+      left: 0
+      background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+
+    &::before
+      z-index: 2
+      right: 0
+      background-image: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+
+  &__nav
+    position: absolute
+    z-index: 2
+    left: 50%
+    top: calc(50%)
+
+    transform: translate(-50%, -50%)
+    +mq($small)
+      top: calc(50% - 50px)
+
+  &__nav-button
+    +resetbutton()
+    position: absolute
+    z-index: 3
+    top: 50%
+    width: 20px
+    height: 40px
+    border-radius: 7px
+    transform: translateY(-50%)
+    // +mq($small)
+
+  &__nav-button_next
+    right: 0
+    transform: translateY(-50%) rotate(180deg)
+    +mq($small)
+      right: 15px
+  &__nav-button_prev
+    left: 0
+    +mq($small)
+      left: 15px

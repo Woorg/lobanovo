@@ -4,13 +4,18 @@ mixin cta(data)
       form.cta__form.form.form_cta(action="" method="post")
         .form__group
           input.form__input(type="text" value="" placeholder="Ваше имя")
-        .form__group
+        .form__group.form__group_phone
           input.form__input(type="text" value="" placeholder="Ваш телефон")
         .form__group
           input.form__input(type="text" value="" placeholder="Ваш E-mail")
 
         input.form__submit.button.button_mirrored(type="submit" value="Отправить")
+        .form__privacy Нажимая кнопку “Отправить”, вы соглашаетесь с
+          a.form__privacy-link(href='#')  Политикой конфиденциальности
+
 
       .cta__content
         h2.cta__title.title.title_reg Наши домики <span>вас <br/>очень ждут!</span>
+        .cta__text.cta__text_mob с <span>31</span> декабря по <span>3</span> января за <span>35 000</span> рублей!
         .cta__text Оставьте свои данные и поможем подобрать домик
+

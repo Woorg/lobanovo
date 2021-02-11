@@ -1,2 +1,51 @@
 mixin video(data)
-    .video
+  section.video
+    .video__container.container
+      h2.video__title.title.title_reg Галерея <span>Видео</span>
+
+    .video__body
+      .video__slider.swiper-container
+        .video__slider-w.swiper-wrapper
+          .video__slide.swiper-slide
+            .video__slide-in
+              .video__link(data-href="https://youtu.be/WeHhltGnops")
+                picture
+                  source(srcset="https://i.ytimg.com/vi_webp/WeHhltGnops/maxresdefault.webp" type="image/webp")
+                  img.video__media(src="https://i.ytimg.com/vi/WeHhltGnops/maxresdefault.jpg" alt="")
+
+
+              button.video__button(aria-label="Запустить видео")
+                != pugHelpers.Icon.call(locals, {iconName: 'video-button', className: '.video__button-icon'})
+
+              .video__slide-title Наши домики
+
+          .video__slide.swiper-slide
+            .video__slide-in
+              .video__link(data-href="https://youtu.be/WeHhltGnops")
+                picture
+                  source(srcset="https://i.ytimg.com/vi_webp/WeHhltGnops/maxresdefault.webp" type="image/webp")
+                  img.video__media(src="https://i.ytimg.com/vi/WeHhltGnops/maxresdefault.jpg" alt="")
+
+              button.video__button(aria-label="Запустить видео")
+                != pugHelpers.Icon.call(locals, {iconName: 'video-button', className: '.video__button-icon'})
+
+              .video__slide-title Наши домики
+
+          .video__slide.swiper-slide
+            .video__slide-in
+              .video__link(data-href="https://youtu.be/WeHhltGnops")
+                picture
+                  source(srcset="https://i.ytimg.com/vi_webp/WeHhltGnops/maxresdefault.webp" type="image/webp")
+                  img.video__media(src="https://i.ytimg.com/vi/WeHhltGnops/maxresdefault.jpg" alt="")
+
+              button.video__button(aria-label="Запустить видео")
+                != pugHelpers.Icon.call(locals, {iconName: 'video-button', className: '.video__button-icon'})
+
+              .video__slide-title Наши домики
+
+      .video__nav.container
+        button.video__nav-button.video__nav-button_next
+          | <svg class="slider__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>
+
+        button.video__nav-button.video__nav-button_prev
+          | <svg class="slider__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>

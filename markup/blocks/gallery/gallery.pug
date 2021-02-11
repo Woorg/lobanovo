@@ -18,31 +18,126 @@ mixin gallery(data)
 
         .tabs__content
           #gallery-1.tabs__tab
-            .gallery__images
-              a.gallery__link(href="assets/images/content/gallery-img-1.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-1.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-2.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-2.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-3.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-3.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-4.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-4.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-5.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-5.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-6.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-6.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-7.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-7.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-8.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-8.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-9.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-9.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-10.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-10.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-11.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-11.jpg" alt="")
-              a.gallery__link(href="assets/images/content/gallery-img-12.jpg")
-                img.gallery__image.lazy(data-src="assets/images/content/gallery-img-12.jpg" alt="")
+            .gallery__images.swiper-container
+              .gallery__images-w.swiper-wrapper
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-1.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-1.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-2.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-2.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-3.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-3.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-4.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-4.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-5.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-5.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-6.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-6.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-7.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-7.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-8.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-8.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-9.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-9.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-10.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-10.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-11.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-11.jpg" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-12.jpg")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-12.jpg" alt="")
+
+
+              .gallery__pagination.swiper-pagination
+
+              button.gallery__button.gallery__button_next
+                | <svg class="gallery__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>
+
+              button.gallery__button.gallery__button_prev
+                | <svg class="gallery__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>
+
+
+          #gallery-2.tabs__tab
+            .gallery__images.swiper-container
+              .gallery__images-w.swiper-wrapper
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-1.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-1.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-2.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-2.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-3.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-3.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-4.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-4.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-5.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-5.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-6.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-6.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-7.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-7.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-8.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-8.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-9.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-9.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-10.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-10.png" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-11.png")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-11.jpg" alt="")
+
+                a.gallery__link.swiper-slide(href="assets/images/content/gallery-img-12.jpg")
+                  .gallery__image-w
+                    img.gallery__image(src="assets/images/content/gallery-img-12.jpg" alt="")
+
+
+              .gallery__pagination.swiper-pagination
+
+              button.gallery__button.gallery__button_next
+                | <svg class="gallery__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>
+
+              button.gallery__button.gallery__button_prev
+                | <svg class="gallery__button-icon" width="30" height="64" viewBox="0 0 30 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="#192A34"/><path d="M18.2867 64C24.2272 64 29.043 59.1842 29.043 53.2437L29.043 10.7563C29.043 4.81576 24.2272 -2.10504e-07 18.2867 -4.70173e-07L0.000952657 -1.26947e-06L0.00094986 64L18.2867 64Z" fill="url(#paint0_linear)"/><path d="M17.7489 23.6641L9.68164 32.0002L17.7489 40.3363" stroke="#192A34" stroke-width="2.15126" stroke-linecap="round"/><defs><linearGradient id="paint0_linear" x1="38.3421" y1="32" x2="0.000951258" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#00FF43"/><stop offset="1" stop-color="#1F993F"/></linearGradient></defs></svg>
+
 
 
           #gallery-2.tabs__tab

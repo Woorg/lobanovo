@@ -1,7 +1,15 @@
 .filter
   // &__form
 
-  &__item
-    margin-right: 73px
+  .filter__item
+    margin-right: 0
+    display: flex
+    // flex-grow: 1
+    justify-content: space-between
+    +mq($small)
+      margin-right: 73px
+
     &:last-child
       margin-right: 0
+      +mq($small)
+        margin-right: 0

@@ -1,2 +1,56 @@
+include ../social/social
+
 mixin feedback(data)
-    .feedback
+  section.feedback
+    .feedback__container.container
+      h2.feedback__title.title.title_reg Отзывы
+
+    .feedback__slider.swiper-container
+      .feedback__slider-w.swiper-wrapper
+        .feedback__slide.swiper-slide
+          .feedback__slide-in
+            .feedback__col
+              .feedback__photo
+                img(src="assets/images/content/feedback-img.png" alt="")
+              +social().feedback__social
+            .feedback__col.feedback__col_wide
+              .feedback__meta
+                .feedback__name Борис Иванов
+                .feedback__city г. Москва
+                img.feedback__badge.lazy(data-src="assets/images/general/badge.png" alt="")
+              .feedback__text Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц. Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц.Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свобо и природных
+              +social().feedback__social.feedback__social_mob
+        .feedback__slide.swiper-slide
+          .feedback__slide-in
+            .feedback__col
+              .feedback__photo
+                img(src="assets/images/content/feedback-img.png" alt="")
+              +social().feedback__social
+            .feedback__col.feedback__col_wide
+              .feedback__meta
+                .feedback__name Борис Иванов
+                .feedback__city г. Москва
+                img.feedback__badge.lazy(data-src="assets/images/general/badge.png" alt="")
+              .feedback__text Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц. Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц.Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свобо и природных
+              +social().feedback__social.feedback__social_mob
+        .feedback__slide.swiper-slide
+          .feedback__slide-in
+            .feedback__col
+              .feedback__photo
+                img(src="assets/images/content/feedback-img.png" alt="")
+              +social().feedback__social
+            .feedback__col.feedback__col_wide
+              .feedback__meta
+                .feedback__name Борис Иванов
+                .feedback__city г. Москва
+                img.feedback__badge.lazy(data-src="assets/images/general/badge.png" alt="")
+              .feedback__text Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц. Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свободных гостиниц.Обилие достопримечательностей и природных красот, хорошие дороги, везде можно найти парковку, много свобо и природных
+              +social().feedback__social.feedback__social_mob
+    .feedback__nav.container
+      button.feedback__nav-button.feedback__nav-button_prev
+        != pugHelpers.Icon.call(locals, {iconName: 'feeback-arrow', className: 'feedback__nav-icon'})
+        | Предыдущий
+
+      button.feedback__nav-button.feedback__nav-button_next
+        | Следующий
+        != pugHelpers.Icon.call(locals, {iconName: 'feeback-arrow', className: 'feedback__nav-icon'})

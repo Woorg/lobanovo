@@ -1,6 +1,10 @@
 .form
   display: flex
-
+  justify-content: space-between
+  flex-wrap: wrap
+  +mq($small)
+    flex-wrap: nowrap
+    justify-content: flex-start
   // &__row
   //   flex-wrap: wrap
   //   +mq($small)
@@ -9,15 +13,20 @@
   &__group
     position: relative
     border: 1px solid #d7dbd7
-    margin-bottom: 0
-    margin-right: 24px
+    +margin-bottom(0)
+    +margin-right(12px)
     // max-width: 250px
-    +rfs(250px, max-width)
     width: 100%
     height: 68px
     display: flex
     background-color: #ffffff
-    border-radius: 60px
+    flex-grow: 1
+    +mq($medium)
+      +margin-right(24px)
+      flex-grow: 0
+      +rfs(250px, max-width)
+      border-radius: 60px
+
     &:last-child
       margin-right: 0
 
@@ -25,29 +34,77 @@
       flex-grow: 1
 
   &__group_phone
-    +rfs(360px, max-width)
+    +mq($small)
+      +rfs(360px, max-width)
+    .form__input
+      +placeholder()
+        color: #4d4d4d
+        +font-size(18px)
+        font-weight: 600
 
   &__group_toggle,
   &__group_quantity
     border: none
-    margin-bottom: 0
-    margin-right: 73px
-    // max-width: 250px
-    +rfs(132px, max-width)
+    +margin-bottom(24px)
     width: 100%
     height: auto
     display: flex
-    flex-direction: column
-
+    align-items: center
     background-color: transparent
     border-radius: 0
+    +mq($small)
+      +margin-right(72px)
+      margin-bottom: 0
+      max-width: 140px
+      flex-direction: column
+
+      // +rfs(132px, max-width)
     &:last-child
       margin-right: 0
 
+    .form__label
+      display: flex
+      align-items: center
+      +mq($small)
+        display: block
+    .form__label-text
+      margin-bottom: 0
+      +mq($small)
+        +margin-bottom(22px)
+    .form__toggle
+      max-width: 132px
+
+      width: 100%
+
+    +mq($small)
+      max-width: 134px
+
+
+  &__group_toggle
+    .form__label
+      margin-left: auto
+      justify-content: space-between
+      +mq($small)
+        margin-left: 0
+
+
+  &__group_quantity
+    .form__label-text
+      margin-bottom: 0
+      max-width: 114px
+      +mq($small)
+        max-width: 100%
+
+  &__group_date
+    .form__input
+      appearance: none
+      +placeholder()
+        color: #4d4d4d
+        +font-size(14px)
+        font-weight: 600
+
   &__quantity-w
     display: flex
-
-
 
   &__field_input
     +mq($small)
@@ -59,6 +116,8 @@
     position: absolute
     top: 50%
     right: 37px
+    pointer-events: none
+    background: #FFF
     transform: translateY(-50%)
 
 
@@ -69,13 +128,20 @@
     cursor: pointer
 
   &__label-text
-    margin-bottom: 18px
+    max-width: 150px
+    width: 100%
     color: #333333
-    font-size: 14px
     font-weight: 700
+    font-size: 12px
     line-height: 1
+    line-height: 1.166
     text-align: left
+    white-space: nowrap
     +tr(.1s linear)
+    +mq($small)
+      margin-bottom: 22px
+      max-width: 100%
+      font-size: 14px
 
   &__toggle
     display: flex
@@ -88,8 +154,12 @@
       &:checked + .form__toggle-slide
         .form__toggle-handle
           // transform: translateY(-50%)
-          transform: translate(calc(100% - 6px), -50%)
+          transform: translate(calc(100% - 13px), -50%)
+
           +tr(.3s ease-out)
+          +mq($small)
+            transform: translate(calc(100% - 13px), -50%)
+
 
   &__toggle-slide
     position: absolute
@@ -98,7 +168,8 @@
     right: 0
     bottom: 0
     display: flex
-    width: 100%
+    flex-grow: 0
+    width: 125px
     background-color: #a3e440
     box-shadow: 0 20px 71px rgba(53, 60, 54, 0.1)
     border-radius: 5px
@@ -145,7 +216,6 @@
 
   &__toggle-text_false
     left: 0
-
   &__toggle-text_true
     right: 0
 
@@ -158,34 +228,44 @@
     height: 68px
     background-color: transparent
     color: #4d4d4d
-    font-size: 18px
+    +font-size(18px)
     font-weight: 600
     +placeholder()
       color: #4d4d4d
-      font-size: 18px
+      +font-size(18px)
       font-weight: 600
 
   &__message
-    padding-top: 14px
-    padding-bottom: 17px
+    +padding-top(14px)
+    +padding-bottom(17px)
     min-height: 100px
 
   &__submit
-    +padding-right(80px)
-    +padding-left(80px)
+    +padding-right(20px)
+    +padding-left(20px)
     flex-grow: 1
     text-align: center
+    +mq($small)
+      flex-grow: 0
+    +mq($medium)
+      +padding-right(20px)
+      +padding-left(20px)
+    +mq($large)
+      +padding-right(80px)
+      +padding-left(80px)
 
   &__quantity-sub,
   &__quantity-add
     +resetbutton()
-    width: 42px
+    width: 26px
     height: 42px
     display: flex
     align-items: center
     justify-content: center
     color: #333
     +tr(.3s linear)
+    +mq($small)
+      width: 50px
     &:hover
       color: #d7d7d7
       +tr(.3s linear)
@@ -195,47 +275,175 @@
   // &__quantity-icon
 
   &__quantity-count
+    +margin-left(10px)
+    +margin-right(10px)
     +resetbutton()
     width: 76px
     height: 42px
     background-color: #ffffff
     color: #333333
-    font-size: 18px
+    +font-size(18px)
     font-weight: 700
     text-align: center
     border-radius: 5px
     box-shadow: 0 20px 71px rgba(53, 60, 54, 0.1)
 
+  &__bottom
+    width: 100%
+
+  &__privacy
+    +margin-top(10px)
+    color: #2b2d42
+    +font-size(11px)
+    font-weight: 400
+    +rfs(1.45, line-height)
+    +mq($small)
+      margin-top: 0
+      display: none
+
+  &__privacy-link
+    color: #2b2d42
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
 
 .form_cta
-  +padding-right(76px)
-  +padding-left(76px)
+  +padding-top(25px)
+  +padding-right(20px)
+  +padding-bottom(20px)
+  +padding-left(20px)
   display: flex
   flex-direction: column
+  justify-content: center
+  +mq($small)
+    // padding-top: 0
+    +padding-right(80px)
+    // padding-bottom: 0
+    +padding-left(76px)
 
   .form__group
-    +margin-bottom(26px)
-    border: none
+    border: 1px solid #d7dbd7
+    margin-right: 0
+    +margin-bottom(10px)
     max-width: 100%
-    height: 56px
+    height: 64px
     background-color: #f8f8f8
     border-radius: 60px
+    +mq($small)
+      border: none
+      +margin-bottom(26px)
+      height: 56px
 
   .form__input
-    color: #828282
     font-family: $n
-    font-size: 16px
-    font-weight: 400
-    text-align: center
-    +placeholder()
+    color: #4d4d4d
+    +font-size(14px)
+    font-weight: 600
+    text-align: left
+    +mq($small)
       color: #828282
-      font-family: $n
-      font-size: 16px
+      +font-size(16px)
       font-weight: 400
+      text-align: center
+
+    +placeholder()
+      color: #4d4d4d
+      font-family: $n
+      +font-size(14px)
+      font-weight: 600
+      +mq($small)
+        color: #828282
+        +font-size(16px)
+        font-weight: 400
+
 
   .form__submit
-    height: 64px
-    font-weight: 700
+    +margin-top(10px)
+    height: 68px
+    font-weight: 600
+    box-shadow: 0 10px 35px rgba(53, 60, 54, .1)
+    +mq($small)
+      +margin-top(18px)
+      height: 56px
+      font-weight: 700
+
+
+.form_popup
+  display: flex
+  flex-direction: column
+  .form__group
+    margin-right: 0
+    margin-bottom: 10px
+    max-width: 100%
+    width: 100%
+    height: 68px
+    flex-grow: 1
+    background-color: #ffffff
+    border: 1px solid #d7dbd7
+    border-radius: 60px
+  .form__input
+    color: #4d4d4d
+    +font-size(14px)
+    font-weight: 600
+  .form__submit
+    margin-top: 10px
+
+
+.form_choose
+  flex-wrap: wrap
+  flex-direction: column
+  +mq($large)
+    flex-direction: row
+  .form__group,
+  .form__group_phone
+    margin-right: 0
+    margin-bottom: 10px
+    border: 1px solid #d7dbd7
+    max-width: 100%
+    height: 65px
+    border-radius: 60px
+    background-color: #f8f8f8
+    +mq($medium)
+      margin-right: 20px
+      margin-bottom: 0
+      max-width: 316px
+
+  .form__input
+    +font-size(14px)
+    font-weight: 600
+    +placeholder()
+      +font-size(14px)
+    +mq($medium)
+      +font-size(18px)
+      +placeholder()
+
+  .form__submit
+    margin-top: 10px
+    +mq($medium)
+      margin-top: 0
+
+  .form__privacy
+    margin-top: 10px
+    margin-left: auto
+    display: block
+    max-width: 414px
+    width: 100%
+    color: #ffffff
+    font-weight: 400
+    +font-size(11px)
+    +rfs(1.454, line-height)
+    +mq($medium)
+      margin-top: 5px
+      +font-size(13px)
+      +rfs(1.230, line-height)
+
+  .form__privacy-link
+    margin-left: 5px
+    color: #ffffff
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
 
 .wpcf7

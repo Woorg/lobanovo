@@ -15,12 +15,13 @@ html(class="no-js" lang="ru")
   include ../blocks/gallery/gallery.pug
   include ../blocks/video/video.pug
   include ../blocks/feedback/feedback.pug
+  include ../blocks/faq/faq.pug
+  include ../blocks/how-get/how-get.pug
 
+  include ../blocks/popup/popup.pug
+  include ../blocks/choose-popup/choose-popup.pug
 
-
-  //- include ../blocks/popup/popup.pug
   //- include ../blocks/contacts/contacts.pug
-
 
   head
     +head(head.defaults)
@@ -37,18 +38,20 @@ html(class="no-js" lang="ru")
       +gallery()
       +video()
       +feedback()
+      +faq()
+      +how-get()
 
     .page__bottom
       +footer()
-      //- +popup()
-
+      +popup()
+      +choose-popup()
 
     //- script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDO60TDSumlziHzbybxGGbAEegP7zLX0Y&callback=initMap" )
     script(src='%=static=%js/separate-js/lazyload.min.js' )
     script(src='%=static=%js/separate-js/swiper-bundle.min.js' )
     script(src='%=static=%js/separate-js/jquery.min.js')
     script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
-    //- script(src='%=static=%js/separate-js/jquery.mask.min.js' )
+    script(src='%=static=%js/separate-js/jquery.mask.min.js' )
     //- script(src='%=static=%js/separate-js/slick.min.js')
 
     script(src='%=static=%js/main%=hash=%%=min=%.js')

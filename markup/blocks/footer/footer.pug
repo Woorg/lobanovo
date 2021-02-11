@@ -1,10 +1,29 @@
-include ../social/social.pug
+include ../nav/nav
+include ../phone/phone
 
 mixin footer(data)
-    footer.footer&attributes(attributes)
-        .footer__container.container.flex
-            a.footer__logo.logo.logo_second(href="#")
-                span.logo__word.logo__word_first Ski
-                span.logo__word.logo__word_second Muse
+  footer.footer&attributes(attributes)
+    .footer__container.container
+      .footer__top
+        a.footer__logo.logo(href="#")
+          img.logo__image(src="assets/images/general/logo.png" alt="")
 
-            +social().footer__social
+        +nav().footer__nav.nav_second
+
+        .footer__controls
+          +phone().footer__phone.phone_second
+
+          a.footer__button.button.button_transparent(href="#") Обратный звонок
+
+      .footer__bottom
+        ul.footer__privacy
+          li.footer__privacy-item
+            a.footer__privacy-link(href="#") Политика обработки персональных данных
+          li.footer__privacy-item
+            a.footer__privacy-link(href="#") Условия использования Пользователями материалов и сервисов сайта
+
+        .footer__created Лендинг разработан в <span>The Red Button</span>
+
+
+
+

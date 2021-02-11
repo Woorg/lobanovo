@@ -1,52 +1,121 @@
 .cta
+  margin-top: -40px
   background-color: #1b2a35
+  +mq($small)
+    margin-top: 0
   &__container
-    +padding-top(75px)
-    +padding-bottom(75px)
-    // min-height: 395px
-    +rfs(395px, height)
+    +padding-top(114px)
+    +padding-right(0px)
+    +padding-left(0px)
     display: flex
     align-items: flex-start
-    // flex-wrap: wrap
+    flex-wrap: wrap
+    +mq($small)
+      // +padding-top(35px)
+      +padding-right(15px)
+      // +padding-bottom(75px)
+      +padding-left(15px)
+      +rfs(395px, height)
+      flex-wrap: nowrap
+    +mq($small)
+      +padding-top(75px)
+
 
   &__form,
   &__content
-    max-width: 50%
     width: 100%
+    +mq($small)
+      max-width: 50%
 
   &__form
     position: relative
-    // top: -70px
-    +rfs(-140px, top)
-    +padding-top(100px)
-    +padding-bottom(117px)
-
-    // width: 693px
-    // min-height: 542px
-    +rfs(542px, min-height)
+    margin-bottom: -10px
     background-color: #ffffff
-    // border-radius: 10px
     +rfs(10px, border-radius)
-
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+    +mq($small)
+      margin-bottom: 0
+      +rfs(-140px, top)
+      +padding-top(90px)
+      +padding-bottom(117px)
+      +rfs(693px, max-width)
+      +rfs(530px, min-height)
 
   &__content
-    +padding-right(200px)
-    +padding-left(100px)
+    +padding-bottom(20px)
+    +padding-right(20px)
+    +padding-left(20px)
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: flex-start
+    order: -1
+    +mq($small)
+      +padding-top(16px)
+      +padding-right(100px)
+      +padding-left(118px)
+      padding-bottom: 0
+      justify-content: center
+      order: 1
+    +mq($large)
+      +padding-top(16px)
+      +padding-right(150px)
+      +padding-left(118px)
+
 
   &__title
     +margin-bottom(25px)
     color: #fff
-    // line-height: 64px
-    +rfs(1.08, line-height)
+    +font-size(52px)
+    font-weight: 700
+    letter-spacing: normal
+    line-height: 1
+    +rfs(1.04px, letter-spacing)
+
+    text-shadow: none
+    +mq($small)
+      +font-size(52px)
+      +rfs(2.68px, letter-spacing)
+      +rfs(1.11, line-height)
+
     span
       color: #a3e440
+      +rfs(1.04px, letter-spacing)
+      +mq($small)
+        +rfs(2.68px, letter-spacing)
+
 
   &__text
+    display: none
+
     color: #1f993f
-    font-size: 24px
+    font-family: $n
+    +font-size(12px)
+    font-weight: 700
+    font-style: normal
+    letter-spacing: normal
+    text-transform: lowercase
+    +rfs(1.166, line-height)
+
+    +mq($small)
+      display: block
+      font-size: 24px
+      font-weight: 400
+      line-height: 1
+
+  &__text_mob
+    +padding-right(350px)
+    display: block
+    color: #1f993f
+    font-family: $n
+    +font-size(12px)
     font-weight: 400
-    line-height: 1
+    letter-spacing: normal
+    text-transform: lowercase
+    +rfs(1.2, line-height)
+    span
+      color: #09e041
+      font-weight: 400
+      letter-spacing: normal
+    +mq($small)
+      +padding-right(0)
+      display: none

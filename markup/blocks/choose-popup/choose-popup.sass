@@ -1,0 +1,326 @@
+.choose-popup
+  position: relative
+  margin: auto
+  max-width: 320px
+  width: 100%
+  background-color: #ffffff
+  border-radius: 10px
+  overflow: hidden
+  +mq($large)
+    max-width: 1200px
+
+  &__top
+    padding-top: 0
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+    display: flex
+    flex-wrap: wrap
+    +mq($large)
+      +padding-top(80px)
+      +padding-right(44px)
+      +padding-bottom(80px)
+      +padding-left(52px)
+
+  &__col
+    width: 100%
+    display: none
+    +mq($large)
+      max-width: 40%
+      display: block
+
+  &__col_shrink
+    position: relative
+    padding-right: 0
+    flex-shrink: 1
+    max-width: 100%
+    display: block
+    +mq($large)
+      +padding-left(44px)
+      max-width: 60%
+      display: block
+
+    .choose-popup__sliders
+      display: block
+      +mq($large)
+        display: none
+    .choose-popup__thumbs-w
+      display: block
+      +mq($large)
+        display: none
+
+  &__title
+    z-index: 1
+    position: absolute
+    bottom: calc(100% - 230px)
+    left: 0
+    +margin-bottom(32px)
+    padding-right: 20px
+    padding-left: 20px
+    font-family: $b
+    font-weight: 700
+    color: #ffffff
+    +font-size(24px)
+    +rfs(1.2px, letter-spacing)
+    +rfs(1.5, line-height)
+    +mq($large)
+      position: static
+      padding-right: 0
+      padding-left: 0
+      color: #333333
+      +font-size(48px)
+      +rfs(1.92px, letter-spacing)
+      +rfs(1.083, line-height)
+
+
+  &__features
+    margin-bottom: 30px
+    padding-right: 20px
+    padding-left: 20px
+    display: flex
+    align-items: center
+    +mq($large)
+      margin-bottom: 0
+      padding-right: 0
+      padding-left: 0
+
+  &__features-item
+    max-width: 50%
+    width: 100%
+    display: flex
+    order: 0
+    +mq($large)
+      margin-right: 40px
+      display: block
+      max-width: 150px
+
+    &:last-child
+      margin-right: 0
+      order: -1
+      +mq($large)
+        order: 1
+
+  &__features-icon
+    margin-right: 10px
+    color: #A3E440
+    flex-shrink: 0
+    +mq($large)
+      margin-right: 0
+
+  &__features-title
+    color: #333333
+    font-weight: 700
+    +font-size(12px)
+    +mq($large)
+      +font-size(14px)
+      +rfs(1.143, line-height)
+
+  &__info
+    +margin-bottom(14px)
+    padding-right: 20px
+    padding-left: 20px
+    +font-size(14px)
+    +mq($large)
+      padding-right: 0
+      padding-left: 0
+  &__item
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+    +padding-top(12px)
+    +padding-bottom(12px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:last-child
+      border-bottom: none
+
+  &__term
+    font-weight: 400
+    font-style: normal
+    +rfs(1.285, line-height)
+
+  &__desc
+    font-weight: 700
+    line-height: 18px
+    +rfs(1.285, line-height)
+    text-align: right
+
+  &__sliders
+    +mq($large)
+      width: 438px
+
+  &__slider
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 16px
+    +mq($large)
+      border-radius: 10px
+      margin-bottom: 30px
+
+  &__slide
+    position: relative
+    height: 227px
+    +mq($large)
+      height: 347px
+
+  &__slide-in
+    position: relative
+    // padding-top: 79%
+    width: 100%
+    height: 227px
+    overflow: hidden
+    +mq($large)
+      width: 438px
+      height: 347px
+
+    .choose-popup__link,
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: 50%
+      +mq($large)
+        border-radius: 10px
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: 50%
+    +mq($large)
+      border-radius: 10px
+
+  &__thumbs-w
+    position: relative
+    margin-bottom: 15px
+    padding-right: 20px
+    padding-left: 20px
+    width: 100%
+    +mq($large)
+      margin-bottom: 30px
+      padding-right: 0
+      padding-left: 0
+      height: 100%
+    .swiper-container
+      margin-right: -6px
+      display: flex
+      flex-wrap: wrap
+      +mq($large)
+
+    .swiper-wrapper
+      margin-right: -5px
+      margin-left: -5px
+      transform: translate3d(0px, 0, 0) !important
+      flex-wrap: wrap
+      width: 566px !important
+      +mq($large)
+        margin-right: -6px
+        margin-left: -6px
+
+      .choose-popup__thumb
+        position: relative
+        margin-bottom: 11px
+        padding-right: 5px
+        padding-left: 5px
+        width: 96px !important
+        +mq($large)
+          padding-left: 6px
+          padding-right: 6px
+          width: 90px !important
+
+  &__thumb
+    position: relative
+    width: 100%
+  //   width: 77px
+  //   height: 77px
+
+  &__thumb_video
+    .choose-popup__thumb-in
+      &:before
+        content: ''
+        position: absolute
+        z-index: 1
+        bottom: 6px
+        left: 7px
+        width: 20px
+        height: 20px
+        background: url('../images/general/video-button.svg') 50% no-repeat
+        background-size: cover
+
+  &__thumb-in
+    position: relative
+    width: 77px
+    height: 77px
+    border-radius: 10px
+    overflow: hidden
+    background-color: #e7e7e7
+    cursor: pointer
+    &:after
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 50%
+      content: ''
+      background-image: linear-gradient(to top, #32d45c 0%, rgba(31, 153, 63, 0) 100%)
+      visibility: visible
+      opacity: 1
+      +tr(.3s ease)
+
+    &:hover
+      &:after
+        visibility: hidden
+        opacity: 0
+        +tr(.3s ease)
+
+    .choose-popup__thumb-image,
+    iframe,
+    object,
+    img
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 100%
+      height: 100%
+      border-radius: 10px
+
+  &__text
+    margin-bottom: 38px
+    padding-right: 20px
+    padding-left: 20px
+    +mq($large)
+      margin-bottom: 38px
+      padding-right: 0
+      padding-left: 0
+
+  &__bottom
+    +padding-top(40px)
+    +padding-right(20px)
+    +padding-bottom(30px)
+    +padding-left(20px)
+    background-color: #1f993f
+    +mq($large)
+      +padding-top(40px)
+      +padding-right(50px)
+      +padding-bottom(35px)
+      +padding-left(50px)
+      border-radius: 10px
+
+
+  button.mfp-close
+    top: 0
+    right: 0
+    opacity: 1
+    color: #FFF
+    font-family: $n
+    font-weight: 300
+    font-size: 42px
+    +mq($large)
+      background-size: 44px 44px

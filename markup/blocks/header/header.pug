@@ -10,10 +10,11 @@ mixin header(data)
       a.header__logo.logo(href="#")
         img.logo__image(src="assets/images/general/logo.png", alt="")
 
-      //- +nav-trigger().header__nav-trigger
-
       +nav().header__nav
 
-      +phone().header__phone
+      .header__contacts
+        +phone().header__phone
 
-      a.header__button.button.button_transparent(href="#") Обратный звонок
+        a.header__button.button.button_transparent.open-popup(href="#top-popup") Обратный звонок
+
+      +nav-trigger().header__nav-trigger

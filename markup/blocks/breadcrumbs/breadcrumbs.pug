@@ -1,25 +1,8 @@
 mixin breadcrumbs(data)
-    .breadcrumbs&attributes(attributes)
-        ul.breadcrumbs__list
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Home
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Resort
+  .breadcrumbs&attributes(attributes)
+    span
+      span
+        a(href='http://skimuse.loc/') Главная
 
+        span.breadcrumb_last(aria-current='page') Наши домики
 
-mixin breadcrumbs-article(data)
-    .breadcrumbs&attributes(attributes)
-        ul.breadcrumbs__list
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Home
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Article
-
-
-mixin breadcrumbs-contacts(data)
-    .breadcrumbs&attributes(attributes)
-        ul.breadcrumbs__list
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Home
-            li.breadcrumbs__item
-                a.breadcrumbs__link(href="#") Contact

@@ -1,5 +1,7 @@
 include ../booking-form/booking-form
 include ../rating/rating
+include ../breadcrumbs/breadcrumbs
+
 
 mixin hero(data)
   section.hero&attributes(attributes)
@@ -7,6 +9,7 @@ mixin hero(data)
       .hero__container.container
         h1.hero__title.title Коттеджный отдых в <span>двух часах</span> от москвы на территории <span>национального парка «Угра»</span>
         .hero__text Выберете желаемую <span>дату заезда и отъезда</span>, а мы подберем для вас <span>подходящий домик</span>
+        a.hero__button.open-popup.button(href='#top-popup') Отправить запрос
         +booking-form().hero__form
         .hero__bottom
           +rating().hero__rating
@@ -17,3 +20,11 @@ mixin hero(data)
       //- source(src='http://media.w3.org/2010/05/sintel/trailer.mp4' type='video/mp4')
       //- source(src='http://media.w3.org/2010/05/sintel/trailer.webm' type='video/webm')
       //- source(src='http://media.w3.org/2010/05/sintel/trailer.ogv' type='video/ogg')
+
+
+mixin hero-inner(data)
+  section.hero.hero_inner&attributes(attributes)
+    .hero__w
+      .hero__container.container
+        +breadcrumbs().hero__breadcrumbs
+        h1.hero__title.title домики в коттеджном поселке <span>деревня лобаново</span>

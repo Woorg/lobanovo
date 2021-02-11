@@ -1,12 +1,39 @@
 .booking-form
+
   height: 141px
   background-color: #e7efe9
   border-radius: 10px
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 10px 50px rgba(24, 111, 47, 0.75)
   &__in
-    +padding-top(36px)
-    +padding-right(76px)
-    +padding-bottom(36px)
-    +padding-left(70px)
+    +padding-top(18px)
+    +padding-right(18px)
+    +padding-bottom(18px)
+    +padding-left(18px)
+    +mq($medium)
+      +padding-top(36px)
+      +padding-right(76px)
+      +padding-bottom(36px)
+      +padding-left(70px)
+
+  &__submit
+    +margin-left(30px)
 
 
+
+.booking-form_popup
+  height: auto
+  background-color: #e7efe9
+  border-radius: none
+  box-shadow: none
+  .booking-form__in
+    padding-top: 0
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+    +mq($medium)
+      padding-top: 0
+      padding-right: 0
+      padding-bottom: 0
+      padding-left: 0
+  .booking-form__submit
+    margin-left: 0

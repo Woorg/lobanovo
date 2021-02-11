@@ -1,17 +1,135 @@
 .footer
-  background-color: #f9f9f9
+  background-color: #272727
   overflow: hidden
 
   &__container
-    flex-wrap: wrap
+    +padding-top(30px)
+    +padding-bottom(30px)
+    +mq($medium)
+      +padding-top(155px)
+      +padding-bottom(75px)
+
+  &__top,
+  &__bottom
+    display: flex
+    flex-wrap: nowrap
+
+  &__top
+    display: flex
     align-items: center
-    +mq($large)
+    flex-wrap: wrap
+    +mq($medium)
       flex-wrap: nowrap
-      height: 60px
+
+  &__bottom
+    +padding-top(20px)
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    +mq($medium)
+      display: flex
 
   &__logo
-    padding-top: 10px
-    padding-bottom: 10px
+    +margin-right(10px)
+    order: 1
 
-  &__social
+    +mq($medium)
+      margin-right: 0
+      order: 0
+      width: 100%
+      +rfs(245px, max-width)
+  .footer__nav
+    // max-width: 710px
+    padding-top: 10px
+    max-width: 185px
+    width: 100%
+    order: 2
+    +mq($medium)
+      order: 1
+      +margin-top(-10px)
+      +rfs(750px, max-width)
+
+  &__nav-trigger
     margin-left: auto
+    display: none
+
+  &__controls
+    margin-bottom: 25px
+    display: flex
+    align-items: center
+    width: 100%
+    order: 0
+    +mq($medium)
+      margin-bottom: 0
+      order: 1
+
+  &__phone
+    +margin-top(-10px)
+    // max-width: 270px
+    +rfs(490px, max-width)
+    width: 100%
+    order: 1
+    +mq($medium)
+      order: 0
+    // +margin-left(40px)
+      +margin-right(0px)
+      +rfs(240px, max-width)
+  &__button
+    border: 2px solid #d9a92a
+    +margin-top(-10px)
+    +margin-right(10px)
+    +padding-right(20px)
+    +padding-left(20px)
+
+    flex-grow: 1
+    +mq($medium)
+      +margin-right(15px)
+      flex-grow: 0
+    +mq($large)
+      margin-right: 0
+      padding-top: 11px
+      padding-bottom: 11px
+      +padding-right(40px)
+      +padding-left(40px)
+      flex-wrap: nowrap
+      order: 0
+    &:hover
+      border: 2px solid darken(#d9a92a, 10)
+      background: transparent
+
+  &__privacy
+    width: 100%
+    font-size: 12px
+    font-weight: 400
+    line-height: 18px
+    +mq($medium)
+      +margin-left(240px)
+      max-width: 263px
+  &__privacy-item
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+
+  &__privacy-link
+    color: #ffffff
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+  &__created
+    +margin-top(30px)
+    color: #4a4e78
+    font-family: $r
+    +font-size(12px)
+    font-weight: 400
+    +rfs(1.5, line-height)
+    text-align: left
+    +mq($medium)
+      margin-top: 0
+      margin-left: auto
+      text-align: right
+
+
+    span
+      color: #5b6094
+      font-weight: 600

@@ -1,0 +1,50 @@
+doctype html
+html(class="no-js" lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/header/header.pug
+  include ../blocks/footer/footer.pug
+  include ../blocks/nav/nav.pug
+
+  include ../blocks/hero/hero.pug
+  include ../blocks/slider/slider.pug
+  include ../blocks/choose-house/choose-house.pug
+  include ../blocks/equipment/equipment.pug
+  include ../blocks/about/about.pug
+  include ../blocks/cta/cta.pug
+  include ../blocks/gallery/gallery.pug
+  include ../blocks/video/video.pug
+  include ../blocks/feedback/feedback.pug
+  include ../blocks/faq/faq.pug
+  include ../blocks/how-get/how-get.pug
+
+  include ../blocks/popup/popup.pug
+  include ../blocks/choose-popup/choose-popup.pug
+  include ../blocks/content/content.pug
+
+  //- include ../blocks/contacts/contacts.pug
+
+  head
+    +head(head.defaults)
+  body.page.page_inner
+    |%=symbols=%
+    +header()
+    main.page__inner
+      +hero-inner().lazy(data-bg='url(assets/images/content/house-bg.jpg)')
+      +content()
+      +cta()
+
+    .page__bottom
+      +footer()
+      +popup()
+      +choose-popup()
+
+    //- script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDO60TDSumlziHzbybxGGbAEegP7zLX0Y&callback=initMap" )
+    script(src='%=static=%js/separate-js/lazyload.min.js' )
+    script(src='%=static=%js/separate-js/swiper-bundle.min.js' )
+    script(src='%=static=%js/separate-js/jquery.min.js')
+    script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+    script(src='%=static=%js/separate-js/jquery.mask.min.js' )
+    //- script(src='%=static=%js/separate-js/slick.min.js')
+
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

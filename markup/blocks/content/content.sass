@@ -1,36 +1,48 @@
 .content
-    // max-width: 800px
+
+  &__container
+    +padding-top(83px)
+    +padding-bottom(83px)
+
+  &__text
+    margin-bottom: 24px
+    max-width: 944px
     width: 100%
     +mq($small)
-        max-width: 66.6%
-
-    &__breadcrumbs
-        margin-bottom: 10px
-
-    &__title
-        margin-bottom: 24px
-
-    &__text
-        margin-bottom: 24px
-        +mq($small)
-            margin-bottom: 53px
-
-    &__side
-        padding-top: 20px
-        display: block
-        +mq($small)
-            display: none
+      margin-bottom: 73px
 
 
-    &__related
-        margin-bottom: 46px
+  &__gallery
+  .gallery
+    margin-top: 33px
+    margin-bottom: 33px
+    margin-right: -20px
+    margin-left: -20px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    +mq($small)
+      margin-top: 73px
+      margin-right: -17px
+      margin-bottom: 73px
+      margin-left: -17px
+  &__item
+  .gallery__item
+    width: 100%
+    background-color: #ffffff
+    border-radius: 10px
+    +mq($small)
+      padding-right: 17px
+      padding-left: 17px
+      max-width: 50%
+      border-radius: 5px
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      border-radius: 10px
+      +mq($small)
+        border-radius: 5px
 
 
-    .blog-slider__top
-        margin-top: (30px / 2)
-        +mq($small)
-            margin-top: 30px
-
-    .blog-slider__image
-        height: 150px
 

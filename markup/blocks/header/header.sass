@@ -4,35 +4,68 @@
   top: 0
   left: 0
   right: 0
+  // border-bottom: 1px solid #394851
+  // background: red
   +tr(.3s linear)
+  +mq($medium)
+    border-bottom: none
+
 
   &__container
+    padding-top: 18px
+    padding-bottom: 18px
     flex-wrap: wrap
     align-items: center
-    +mq($large)
+    +mq($medium)
       padding-top: 11px
       padding-bottom: 11px
       flex-wrap: nowrap
 
   &__logo
-    padding-top: 15px
-    padding-bottom: 15px
-    +mq($small)
-      padding-top: 10px
-      padding-bottom: 10px
-      // max-width: 245px
-      +rfs(245px, max-width)
-      width: 100%
+    position: relative
+    z-index: 1
+    max-width: 100px
+    // +rfs(100px, max-width)
+    width: 100%
+    +mq($medium)
+      max-width: 242px
+    //   +rfs(242px, max-width)
 
   &__nav
     // max-width: 710px
-    +rfs(710px, max-width)
+    margin-right: auto
+    +rfs(715px, max-width)
     width: 100%
+    +mq($medium)
+      margin-top: -10px
+
 
   &__nav-trigger
     margin-left: auto
+    +mq($medium)
+      display: none
 
+  &__contacts
+    margin-left: auto
+    display: flex
+    -webkit-align-items: center
+    align-items: center
+    +mq($medium)
+      // margin-top: -10px
+      max-width: 485px
+      width: 100%
   &__phone
     // max-width: 270px
-    +rfs(270px, max-width)
+    // max-width: 130px
+    // +rfs(130px, max-width)
     width: 100%
+    +mq($medium)
+      margin-top: -10px
+      // max-width: 260px
+      // +rfs(260px, max-width)
+
+  &__button
+    margin-top: -10px
+    display: none
+    +mq($medium)
+      display: flex

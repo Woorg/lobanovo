@@ -1,9 +1,54 @@
 .tabs
   &__nav
-    border-bottom: 4px solid #f1f1f1
-    +margin-bottom(54px)
+    position: relative
+    margin-right: -60px
+    +margin-bottom(28px)
+    +padding-bottom(4px)
+    +mq($small)
+      margin-right: 0
+      +margin-bottom(54px)
+      padding-bottom: 0
+      overflow-y: scroll
+
+
+    // &::-webkit-scrollbar-track
+    //   // display: none
+    //   // appearance: none
+    //   height: 4px
+    //   background-color: #f1f1f1
+    //   +mq($small)
+    //     background-color: transparent
+
+
+    &::-webkit-scrollbar
+      // display: none
+      height: 4px
+      background-color: #f1f1f1
+      +mq($small)
+        background-color: transparent
+
+    &::-webkit-scrollbar-thumb
+      border-radius: 8px
+      background-color: #f1f1f1
+      display: none
+      +mq($small)
+        background-color: transparent
+
+    &::-webkit-scrollbar-button
+      display: none
+    // &:after
+    //   position: absolute
+    //   bottom: 0
+    //   width: 100%
+    //   height: 4px
+    //   content: ''
+    //   background: #f1f1f1
+
+
   &__item
-    +padding-right(90px)
+    +padding-right(30px)
+    +mq($small)
+      +padding-right(90px)
     &:last-child
       padding-right: 0
 
@@ -13,19 +58,26 @@
     +padding-top(10px)
     +padding-bottom(10px)
     color: #000000
-    +font-size(18px)
     font-weight: 700
-    +rfs(0.36px, letter-spacing)
-    +rfs(1.333, line-height)
+
+    +font-size(12px)
+    +rfs(0.24px, letter-spacing)
+    +rfs(1, line-height)
     text-transform: uppercase
     text-decoration: none
     +tr(.3s linear)
+    white-space: nowrap
+    +mq($small)
+      +padding-bottom(10px)
+      +font-size(18px)
+      +rfs(0.36px, letter-spacing)
+      +rfs(1.333, line-height)
 
     &:after
       position: absolute
       left: 0
       right: 0
-      bottom: -4px
+      bottom: 4px
       height: 4px
       background: #1f993f
       content: ""
@@ -33,6 +85,8 @@
       opacity: 1
       border-radius: 9px
       +tr(.3s linear)
+      +mq($small)
+        bottom: 0
 
     &:last-child,
     &:first-child
@@ -51,16 +105,20 @@
         +tr(opacity .3s linear)
 
   [role=tab][aria-selected=true]
-    color: #000000
+    background: transparent
+    color: #1f993f
     +tr(.3s linear)
     &:after
-      bottom: -4px
+      bottom: 0
       height: 4px
       background-color: #1f993f
       visibility: visible
       opacity: 1
       border-radius: 9px
       +tr(.3s linear)
+      +mq($small)
+        bottom: 0
+
 
   &__link
     color: #000000

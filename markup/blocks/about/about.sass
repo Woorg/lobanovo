@@ -1,29 +1,44 @@
 .about
   overflow: hidden
   &__container
-    +padding-top(75px)
-    +padding-bottom(75px)
+    +mq($small)
+      +padding-top(105px)
+      +padding-bottom(228px)
 
   &__image
+    margin-bottom: 30px
+    display: block
+    +mq($small)
+      margin-bottom: 0
     img
       display: block
+      width: 100%
+      height: auto
 
   &__title
-    margin-bottom: 33px
+    +margin-bottom(10px)
+    +mq($small)
+      +margin-bottom(35px)
   &__text
-    margin-bottom: 57px
-    // max-width: 870px
-    +rfs(870px ,max-width)
+    +margin-bottom(22px)
+    +mq($small)
+      +margin-bottom(57px)
+      +rfs(870px ,max-width)
 
   &__articles
-    +margin-right(-18px)
-    +margin-left(-18px)
     display: flex
     flex-wrap: wrap
+    +mq($small)
+      +margin-right(-18px)
+      +margin-left(-18px)
 
   &__article
-    margin-bottom: 38px
-    margin-right: 18px
-    margin-left: 18px
-    max-width: 30.7%
+    margin-bottom: 10px
     width: 100%
+
+    +mq($small)
+      padding-right: 18px
+      margin-bottom: 38px
+      padding-left: 18px
+      max-width: 33.3%
+

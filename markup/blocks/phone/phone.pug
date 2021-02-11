@@ -1,2 +1,4 @@
 mixin phone(data)
-  a.phone(href="tel:")&attributes(attributes) +7 800 800-90-90
+  a.phone(href="tel:")&attributes(attributes)
+    != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'phone__icon'})
+    | +7 800 800-90-90

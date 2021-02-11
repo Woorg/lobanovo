@@ -1,10 +1,34 @@
 .phone
+  position: relative
+  +padding-left(25px)
   color: #ffffff
-  font-size: 24px
+  +font-size(12px)
   font-weight: 700
   line-height: 1
   +tr(.3s linear)
+  letter-spacing: normal
   text-decoration: none
+  white-space: nowrap
+  +mq($medium)
+    padding-left: 0
+    +font-size(24px)
   &:hover
     color: darken(#ffffff, 10)
     +tr(.3s linear)
+
+  &__icon
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    +mq($medium)
+      display: none
+
+
+.phone_second
+  padding-left: 0
+  +font-size(14px)
+  +mq($medium)
+    +font-size(24px)
+  .phone__icon
+    display: none

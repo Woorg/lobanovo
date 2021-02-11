@@ -5,61 +5,66 @@
   color: #1f1f1f
   color: #ffffff
   font-family: $b
-  +font-size(64px)
+  +font-size(35px)
   font-weight: 400
-  font-style: normal
-  // letter-spacing: 2.56px
-  // +letter-spacing(2.56px)
-  +rfs(2.56px, letter-spacing)
-  // line-height: 80px
-  +rfs(1.25, line-height)
-
-  text-align: left
+  +rfs(0.6px, letter-spacing)
+  +rfs(1.2, line-height)
   text-transform: uppercase
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
-  // +mq($small)
+  +mq($small)
+    +font-size(64px)
+    +rfs(2.56px, letter-spacing)
+    +rfs(1.25, line-height)
   span
     color: #72e240
     font-weight: 700
-    +rfs(2.56px, letter-spacing)
+    +rfs(0.6px, letter-spacing)
+    +mq($small)
+      +rfs(2.58px, letter-spacing)
 
 
 .title_reg
   color: #333333
-  +font-size(52px)
   font-weight: 700
-  +rfs(2.6px, letter-spacing)
-  // line-height: 64px
-  +rfs(1.23, line-height)
+  +font-size(24px)
+  +rfs(0.48px, letter-spacing)
+  +rfs(1.166, line-height)
   text-shadow: none
+  +mq($small)
+    +font-size(52px)
+    +rfs(2.68px, letter-spacing)
+    +rfs(1.23, line-height)
   span
     color: #1f993f
-    // letter-spacing: normal
-    // letter-spacing: 1.04px
-    +rfs(1.04px, letter-spacing)
+    +rfs(0.48px, letter-spacing)
+    +mq($small)
+      +rfs(2.68px, letter-spacing)
 
 .title_small
   color: #ffffff
   +font-size(30px)
   font-weight: 700
-  // letter-spacing: 1.5px
   +rfs(1.5px, letter-spacing)
-  // line-height: 36px
   +rfs(1.2, line-height)
   text-shadow: none
 
 .title_smallest
   color: #333333
-  font-family: $n
-  font-size: 24px
-  +font-size(24px)
-  font-weight: 900
-  // letter-spacing: 0.72px
-  +rfs(0.72px, letter-spacing)
-  // line-height: 32px
-  +rfs(1.333, line-height)
+  font-family: $b
+  font-size: 16px
+  font-weight: 400
+  line-height: 28px
+  +rfs(0.32px, letter-spacing)
+  +rfs(1.75, line-height)
   text-transform: uppercase
   text-shadow: none
+
+  +mq($small)
+    font-family: $n
+    +font-size(24px)
+    font-weight: 900
+    +rfs(0.72px, letter-spacing)
+    +rfs(1.333, line-height)
 
 
 .button
@@ -74,8 +79,8 @@
   // +height(68px)
   background-image: linear-gradient(to left, #259e3f 0%, #6ddd40 100%)
   color: #ffffff
-  font-size: 18px
-  font-weight: 600
+  +font-size(18px)
+  font-weight: 700
   line-height: 1
   text-align: center
   text-decoration: none
@@ -93,14 +98,23 @@
   &:hover
     background-image: linear-gradient(to right, #72e140 0%, #209a3f 100%)
 
+.button_yellow
+  background-image: linear-gradient(to left, #ffdb56 0%, #f0be2b 100%)
+  color: #454545
+  &:hover
+    background-image: linear-gradient(to right, #ffdb56 0%, #f0be2b 100%)
+
 .button_transparent
   border: 2px solid #72e240
   height: 42px
   background-color: transparent
   background-image: none
-  font-size: 14px
+  +font-size(12px)
   font-weight: 700
   border-radius: 39px
+  +mq($small)
+    +font-size(14px)
+
   &:hover
     background-color: #72e240
 
@@ -115,11 +129,15 @@
 
 .text
   color: #333333
-  +font-size(18px)
+
   font-weight: 400
-  // line-height: 28px
-  +rfs(1.555, line-height)
-  //
+  +font-size(12px)
+  +rfs(1.5, line-height)
+
+  +mq($small)
+    +font-size(18px)
+    +rfs(1.555, line-height)
+
   h2,
   h3
     margin-bottom: (25px / 2)
@@ -135,14 +153,19 @@
 
 
   p
-    margin-bottom: (40px / 2)
-    +font-size(18px)
+    margin-bottom: 8px
     font-weight: 400
-    // line-height: 28px
-    +rfs(1.555, line-height)
+    +font-size(12px)
+    +rfs(1.5, line-height)
+
+    +mq($medium)
+      +font-size(18px)
+      +rfs(1.83, line-height)
 
     &:last-of-type
         margin-bottom: 0
+
+
 
   a
 
@@ -167,6 +190,11 @@
     +mq($small)
       margin-bottom: 40px
 
+  ul
+    li
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
 
 
 @keyframes bounceLeft

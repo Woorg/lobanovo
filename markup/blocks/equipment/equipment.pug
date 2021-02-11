@@ -16,13 +16,15 @@ mixin equipment(data)
           li.equipment__item
             a.equipment__link(data-src="assets/images/content/image-scheme-5.svg") Курение: курение в Домике не допускается, но допускается на террасе
 
-        .equipment__image.lazy(data-bg="url(assets/images/content/equipment-image.jpg)")
+        .equipment__image-w
+          img.equipment__image(src='assets/images/content/equipment-image.jpg' alt='')
+
           img.equipment__scheme(src="" alt="")
 
 
       .equipment__additional
 
-        h3.equipment__additional.title.title_smallest Дополнительные услуги
+        h3.equipment__additional-title.title.title_smallest Дополнительные услуги
         ul.equipment__additional-list
           li.equipment__additional-item.equipment__additional-item_active Русская баня на дровах — <span>750 руб./час</span>, не менее <span>2-х</span> часов
 

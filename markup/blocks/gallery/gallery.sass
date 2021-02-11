@@ -1,49 +1,159 @@
 .gallery
+  overflow: hidden
   &__container
-    +padding-top(220px)
-    +padding-bottom(75px)
+    +padding-top(95px)
+    +padding-bottom(46px)
+    +mq($small)
+      +padding-top(250px)
+      +padding-bottom(95px)
+
   &__title
-    +margin-bottom(70px)
+    +margin-bottom(20px)
+    +mq($small)
+      +margin-bottom(60px)
   // &__tabs
 
+
   &__images
-    +margin-right(-18px)
-    +margin-left(-18px)
+    +margin-right(-20px)
+    +margin-left(-20px)
     display: flex
     flex-wrap: wrap
+    +mq($small)
+      +margin-right(-18px)
+      +margin-left(-18px)
 
   &__link
+    +padding-right(5px)
+    +margin-bottom(10px)
+    +padding-left(5px)
+    display: block
+    // width: 220px
+    // width: 100%
+    // height: 230px
+
+    +mq($small)
+      +padding-right(18px)
+      +margin-bottom(36px)
+      +padding-left(18px)
+      max-width: 25%
+      +rfs(20px, border-radius)
+    +mq($small)
+      max-width: 25%
+
+  .swiper-wrapper
+    +mq($small)
+      flex-wrap: wrap
+  &__image-w
     position: relative
-    +margin-right(18px)
-    +margin-bottom(36px)
-    +margin-left(18px)
-    max-width: 22.5%
-    width: 100%
+    display: flex
+    flex-wrap: wrap
     background-color: #e7e7e7
-    +rfs(20px, border-radius)
+    border-radius: 10px
+    +mq($small)
+      border-radius: 20px
+
     &:after
       position: absolute
+      // z-index: 1
       bottom: 0
       left: 0
       right: 0
       content: ''
       height: 50%
       background-image: linear-gradient(to bottom, rgba(31, 153, 63, 0) 0%, rgba(31, 153, 63, 0.79) 100%)
-      opacity: 0
-      visibility: hidden
-      +rfs(0 0 20px 20px, border-radius)
+      // opacity: 0
+      // visibility: hidden
+      +rfs(0 0 10px 10px, border-radius)
       +tr(.3s linear)
+      +mq($small)
+        +rfs(0 0 20px 20px, border-radius)
 
     &:hover
       &:after
-        visibility: visible
-        opacity: 1
+        // visibility: visible
+        // opacity: 1
         +tr(.3s linear)
   &__image
     display: block
-    +rfs(20px, border-radius)
+    width: 100%
+    border-radius: 10px
+    +mq($small)
+      border-radius: 20px
 
 
-img.mfp-img,
-.mfp-figure figure
-  +rfs(20px, border-radius)
+  &__pagination
+    +mq($small)
+      display: none
+
+  &__pagination,
+  .swiper-pagination-bullets
+    // bottom: -20px
+    // +bottom(-20px)
+    left: calc(50% - 10px)
+    right: calc(50% - 10px)
+    +rfs(10px, bottom)
+    +mq($small)
+      right: calc(50% - 20px)
+      left: calc(50% - 20px)
+      transform: translateX(-50%)
+
+  .swiper-pagination-bullet
+    border: 2px solid #e1e1e1
+    margin-right: 6px
+    margin-left: 6px
+    width: 16px
+    height: 16px
+    background: transparent
+    opacity: 1
+    +mq($small)
+      width: 18px
+      height: 18px
+
+  .swiper-pagination-bullet-active
+    position: relative
+    border: 2px solid #09e041
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ''
+      transform: translate(-50%, -50%)
+      width: 6px
+      height: 6px
+      background-color: #ffffff
+      border-radius: 50%
+      +mq($small)
+        width: 8px
+        height: 8px
+
+
+  &__button
+    +resetbutton()
+    position: absolute
+    z-index: 1
+    top: calc(50% + 5px)
+    +mq($small)
+      display: none
+
+  &__button-icon
+    width: 20px
+    height: 44px
+    +mq($small)
+      width: 30px
+      height: 64px
+
+  &__button_next
+    right: 0
+    transform: translateY(-50%) rotate(180deg)
+    +mq($small)
+      right: 0
+  &__button_prev
+    left: 0
+    transform: translateY(-50%)
+    +mq($small)
+      left: 0
+
+// img.mfp-img,
+// .mfp-figure figure
+//   +rfs(20px, border-radius)

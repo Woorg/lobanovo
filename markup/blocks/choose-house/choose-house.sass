@@ -1,23 +1,38 @@
 .choose-house
   overflow: hidden
   &__container
-    +padding-top(90px)
-    +padding-bottom(45px)
+    +padding-top(30px)
+    +padding-bottom(30px)
+    +mq($small)
+      +padding-top(86px)
+      +padding-bottom(32px)
   &__title
-    +margin-bottom(45px)
+    +margin-bottom(24px)
+    margin-left: 0
+    +mq($small)
+    +margin-bottom(49px)
+    +margin-left(-4px)
+
 
   &__filter
-    +margin-bottom(65px)
+    +mq($small)
+      +margin-bottom(65px)
 
   &__grid
-    margin-left: -15px
-    margin-right: -15px
     display: flex
     flex-wrap: wrap
+    +mq($small)
+      margin-left: -15px
+      margin-right: -15px
   &__card
-    margin-right: 15px
-    margin-bottom: 33px
-    margin-left: 15px
+    margin-bottom: 10px
     // max-width: 25%
-    +rfs(22.8%, max-width)
     width: 100%
+    +mq($small)
+      margin-bottom: 33px
+      padding-right: 15px
+      padding-left: 15px
+      max-width: 33.3%
+
+    &:last-child
+      margin-bottom: 0

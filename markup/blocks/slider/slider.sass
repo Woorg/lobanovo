@@ -1,50 +1,79 @@
 .slider
-  +margin-top(-200px)
+  margin-top: 0
+  +mq($medium)
+    +margin-top(-210px)
 
   &__container
     position: relative
-
+    padding-right: 0
+    padding-left: 0
+    border-radius: 0 0 5px 5px
+    +mq($medium)
+      +padding-right(15px)
+      +padding-left(15px)
+      border-radius: 20px
   &__wrapper
-    border-radius: 20px
+    border-radius: 0 0 5px 5px
+    +mq($medium)
+      border-radius: 20px
 
   &__slide
     position: relative
+    height: 238px
     background-image: linear-gradient(to top, rgba(14, 13, 22, 0) 0%, #0e0d16 53%, rgba(14, 13, 22, 0) 100%)
-    border-radius: 20px
-    box-shadow: 0 45px 90px rgba(53, 60, 54, 0.5)
+    border-radius: 0 0 5px 5px
+    +mq($medium)
+      height: 406px
+      border-radius: 20px
+    // box-shadow: 0 45px 90px rgba(53, 60, 54, 0.5)
 
   &__image
     width: 100%
-    height: auto
+    height: 100%
     display: block
     object-fit: cover
+    object-position: 40% 0
+
     border-radius: 20px
+    +mq($medium)
+      border-radius: 20px
 
   &__content
     position: absolute
     z-index: 1
     top: 0
     left: 0
-    +padding-top(106px)
-    +padding-left(143px)
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    // +padding-top(66px)
+    padding-left: 50px
+    +mq($medium)
+      +padding-top(106px)
+      +padding-left(143px)
 
   &__title
-    +margin-bottom(10px)
+    +margin-bottom(7px)
     color: #ffffff
     font-family: $b
-    +font-size(72px)
     font-weight: 700
-    font-style: normal
-    +rfs(1.44px, letter-spacing)
-    +rfs(66.5px, line-height)
-    text-align: left
+    +font-size(36px)
+    +rfs(0.72px, letter-spacing)
+    line-height: 1
+    +mq($medium)
+      +margin-bottom(25px)
+      +font-size(72px)
+      +rfs(1.44px, letter-spacing)
 
   &__text
     color: #269f3f
-    +font-size(24px)
     font-weight: 400
-    // line-height: 25px
-    +rfs(1.041, line-height)
+    +font-size(12px)
+    +rfs(1.166, line-height)
+    +mq($medium)
+      +font-size(24px)
+      +rfs(1.041, line-height)
     span
       color: #0adb41
       font-weight: 700
@@ -53,16 +82,24 @@
   .swiper-pagination-bullets
     // bottom: -20px
     // +bottom(-20px)
-    +rfs(50px, bottom)
+    left: 0
+    right: 0
+    +rfs(10px, bottom)
+    +mq($medium)
+      left: calc(50% - 20px)
+      transform: translateX(-50%)
 
   .swiper-pagination-bullet
     border: 2px solid #e1e1e1
-    margin-right: 5px
-    margin-left: 5px
-    width: 18px
-    height: 18px
+    margin-right: 6px
+    margin-left: 6px
+    width: 16px
+    height: 16px
     background: transparent
     opacity: 1
+    +mq($medium)
+      width: 18px
+      height: 18px
 
   .swiper-pagination-bullet-active
     position: relative
@@ -73,16 +110,27 @@
       left: 50%
       content: ''
       transform: translate(-50%, -50%)
-      width: 8px
-      height: 8px
+      width: 6px
+      height: 6px
       background-color: #ffffff
       border-radius: 50%
+      +mq($medium)
+        width: 8px
+        height: 8px
+
 
   &__button
     +resetbutton()
     position: absolute
     z-index: 1
-    top: 50%
+    top: calc(50% + 5px)
+
+  &__button-icon
+    width: 20px
+    height: 44px
+    +mq($medium)
+      width: 30px
+      height: 64px
 
   &__button_next
     right: 0

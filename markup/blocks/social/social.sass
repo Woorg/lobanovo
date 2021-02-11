@@ -1,62 +1,18 @@
 .social
-    white-space: nowrap
-    &__item
-        margin-right: 12px
-        width: 32px
-        height: 32px
-        &:last-child
-            margin-right: 0
+  white-space: nowrap
+  &__item
+    margin-right: 5px
+    width: 19px
+    height: 19px
+    &:last-child
+      margin-right: 0
 
-    &__link
-        position: relative
-        border: 1px solid #dbdbdb
-        display: flex
-        justify-content: center
-        height: 100%
-        align-items: center
-        background-color: rgba(255,255,255,.1)
-        color: #dbdbdb
-        text-decoration: none
-        text-transform: uppercase
-        border-radius: 50%
-        +tr(.3s linear)
+  &__link
+    height: 100%
+    text-decoration: none
+    opacity: 1
+    +tr(.3s linear)
 
-        &:hover
-            color: darken(#dbdbdb, 10)
-            +tr(.3s linear)
-
-.social_side
-    .social__item
-        margin-right: 0
-        margin-bottom: 14px
-        width: 100%
-
-    .social__link
-        border: none
-        justify-content: flex-start
-        align-items: center
-        color: #1f1f1f
-        font-size: 16px
-        font-weight: 400
-        letter-spacing: -0.32px
-        line-height: 1
-        text-decoration: none
-        text-transform: none
-        border-radius: 0
-
-    .social__icon-w
-        position: relative
-        border: 1px solid #6a7bff
-        margin-right: 10px
-        width: 30px
-        height: 30px
-        flex-shrink: 0
-        border-radius: 50%
-
-    .social__icon
-        position: absolute
-        top: 50%
-        left: 50%
-        color: #6a7bff
-        transform: translate(-50%, -50%)
-
+    &:hover
+      opacity: .8
+      +tr(.3s linear)

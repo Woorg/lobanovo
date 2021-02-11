@@ -1,0 +1,105 @@
+.faq
+  &__container
+    +padding-top(50px)
+    +padding-bottom(0)
+    +mq($small)
+      +padding-top(135px)
+      +padding-bottom(195px)
+
+  &__title
+    +margin-bottom(60px)
+
+  &__list
+    +margin-right(-20px)
+    +margin-left(-20px)
+    +mq($small)
+      margin-left: 0
+      margin-right: 0
+
+  &__item
+    position: relative
+    +margin-bottom(30px)
+    +padding-right(20px)
+    +padding-bottom(40px)
+    +padding-left(20px)
+    background-color: #ffffff
+    border-radius: 5px
+    +mq($small)
+      +margin-bottom(30px)
+      +padding-right(100px)
+      +padding-bottom(40px)
+      +padding-left(100px)
+      box-shadow: 0 10px 35px rgba(53, 60, 54, 0.1)
+    &:last-child
+      margin-bottom: 0
+    &[open]
+      .faq__question
+        display: flex
+        align-items: center
+        .faq__arrow
+          color: #df8c4c
+          transform: rotate(180deg)
+
+  &__icon
+    position: absolute
+    top: -25px
+    left: 0
+    width: 25px
+    height: 25px
+    +mq($small)
+      top: 38px
+      left: -60px
+      width: 30px
+      height: 30px
+
+  &__question
+    position: relative
+    +padding-top(8px)
+    +padding-right(150px)
+    +padding-bottom(8px)
+    display: block
+    color: #1f993f
+    font-weight: 700
+    +font-size(16px)
+    font-weight: 800
+    +rfs(1.125, line-height)
+
+    +mq($small)
+      +padding-top(52px)
+      +padding-right(50px)
+      +font-size(24px)
+      line-height: 1
+    &::-webkit-details-marker
+      display: none
+
+  &__arrow
+    position: absolute
+    top: 50%
+    right: 0
+    color: #333333
+    width: 15px
+    height: 10px
+    transform: translateY(-50%)
+    +mq($small)
+      margin-left: 30px
+      width: 18px
+      height: 11px
+
+  &__answer
+    +margin-top(5px)
+    font-weight: 400
+    +font-size(12px)
+    +rfs(1.5, line-height)
+    +mq($small)
+      +margin-top(20px)
+      +font-size(18px)
+      +rfs(1.666, line-height)
+    p
+      +margin-bottom(15px)
+      +mq($small)
+        +margin-bottom(30px)
+      &:last-of-type
+        margin-bottom: 0
+
+    strong
+      font-weight: 700
